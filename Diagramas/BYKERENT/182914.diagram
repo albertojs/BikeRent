@@ -1,0 +1,37 @@
+format 76
+
+classinstance 128002 class_ref 257666 // Form1
+ name ""  xyz 142 86 2000
+classinstance 128130 class_ref 257026 // TransferTienda
+ name ""  xyz 287 86 2000
+classinstance 128514 class_ref 257154 // DAOTienda
+ name ""  xyz 297 182 2000
+classinstance 128898 class_ref 257794 // Fichero
+ name ""  xyz 469 182 2000
+linkcanvas 128258
+  from ref 128002 z 2001 to ref 128130
+dirscanvas 128386 z 1000 linkcanvas_ref 128258
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "1 SalvarTienda" xyz 203 67 3000
+linkcanvas 128642
+  from ref 128130 z 2001 to ref 128514
+dirscanvas 128770 z 1000 linkcanvas_ref 128642
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "2 pasoDatos()" xyz 352 140 3000
+linkcanvas 129026
+  from ref 128514 z 2001 to ref 128898
+dirscanvas 129154 z 1000 linkcanvas_ref 129026
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "3 salvar()" xyz 394 163 3000
+msgs
+  explicitmsg "SalvarTienda"
+    forward ranks 1 "1" dirscanvas_ref 128386
+    no_msg
+  explicitmsg "pasoDatos()"
+    forward ranks 2 "2" dirscanvas_ref 128770
+    no_msg
+  explicitmsg "salvar()"
+    forward ranks 3 "3" dirscanvas_ref 129154
+    no_msg
+msgsend
+end

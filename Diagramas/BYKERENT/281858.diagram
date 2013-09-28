@@ -1,0 +1,25 @@
+format 76
+
+classinstance 128002 class_ref 245762 // Form1
+ name "Interfaz"  xyz 75 92 2000
+classinstance 128130 class_ref 244994 // Tienda
+ name "controlador"  xyz 288 92 2000
+classinstance 128898 class_ref 243842 // Bicicleta
+ name ""  xyz 312 257 2000
+classinstance 129538 class_ref 244482 // ListaBicicletas
+ name ""  xyz 525 97 2000
+linkcanvas 128642
+  from ref 128130 z 2001 to ref 128002
+dirscanvas 128770 z 1000 linkcanvas_ref 128642
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+linkcanvas 129282
+  from ref 128898 z 2001 to point 336 131
+  line 129922 z 2001 to ref 128130
+dirscanvas 129410 z 1000 linkcanvas_ref 129282
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+linkcanvas 129666 decenter_end 344
+  from ref 128130 z 2001 to ref 129538
+dirscanvas 129794 z 1000 linkcanvas_ref 129666
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+no_msg
+end

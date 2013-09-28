@@ -1,0 +1,57 @@
+format 76
+
+classinstance 128002 class_ref 244994 // Tienda
+  name ""   xyz 137 4 2005 life_line_z 2000
+textcanvas 128258 "borrado = true
+"
+  xyzwh 191 291 2025 80 29
+classinstance 128386 class_ref 244866 // ListaOfertas
+  name ""   xyz 261 4 2000 life_line_z 2000
+textcanvas 128514 "borrado <<bool>>"
+  xyzwh 70 331 2020 85 14
+classinstance 128642 class_ref 245762 // Form1
+  name ""   xyz 28 4 2000 life_line_z 2000
+fragment 128770 "if"
+  xyzwh 134 156.5 2015 192 166
+end
+durationcanvas 128898 classinstance_ref 128002 // :Tienda
+  xyzwh 156 135 2010 11 243
+end
+durationcanvas 129026 classinstance_ref 128386 // :ListaOfertas
+  xyzwh 293 268 2010 11 43
+end
+durationcanvas 129154 classinstance_ref 128642 // :Form1
+  xyzwh 47 134 2010 11 378
+end
+durationcanvas 129282 classinstance_ref 128386 // :ListaOfertas
+  xyzwh 293 178 2010 11 58
+end
+msg 129410 return
+  from durationcanvas_ref 128898
+  to durationcanvas_ref 129154
+  yz 341 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129538 synchronous
+  from durationcanvas_ref 128898
+  to durationcanvas_ref 129026
+  yz 268 2015 explicitmsg "borraElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 172 254
+msg 129666 return
+  from durationcanvas_ref 129026
+  to durationcanvas_ref 128898
+  yz 300 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129794 synchronous
+  from durationcanvas_ref 128898
+  to durationcanvas_ref 129282
+  yz 179 2015 explicitmsg "getOferta(nReg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 177 166
+msg 129922 synchronous
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 128898
+  yz 136 2015 msg operation_ref 263042 // "borraOferta(in numRegistro : int) : bool"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 62 124
+end

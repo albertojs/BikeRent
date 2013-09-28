@@ -1,0 +1,36 @@
+format 76
+
+classinstance 128002 class_ref 257666 // Form1
+ name ""  xyz 140 109 2000
+classinstance 128130 class_ref 256898 // Tienda
+ name ""  xyz 310 110 2000
+classinstance 128514 class_ref 256386 // ListaBicicletas
+ name ""  xyz 579 110 2000
+linkcanvas 128258
+  from ref 128002 z 2001 to ref 128130
+dirscanvas 128386 z 1000 linkcanvas_ref 128258
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "1 modificarBici()" xyz 211 90 3000
+linkcanvas 128642
+  from ref 128130 z 2001 to ref 128514
+dirscanvas 128770 z 1000 linkcanvas_ref 128642
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "2 dameElemento(posicion)
+4 modificarElemento(posicon)" xyz 398 75 3000
+  backward_label "3 ListaBicis" xyz 440 141 3000
+msgs
+  msg operation_ref 283138 // "modificarBici(in numRegistro : int, in bici : Bicicleta)"
+    forward ranks 1 "1" dirscanvas_ref 128386
+    no_msg
+  explicitmsg "dameElemento(posicion)"
+    forward ranks 2 "2" dirscanvas_ref 128770
+    msgs
+      explicitmsg "ListaBicis"
+	backward ranks 3 "2.1" dirscanvas_ref 128770
+	no_msg
+    msgsend
+  explicitmsg "modificarElemento(posicon)"
+    forward ranks 4 "3" dirscanvas_ref 128770
+    no_msg
+msgsend
+end

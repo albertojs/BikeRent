@@ -1,0 +1,71 @@
+format 76
+
+classinstance 128130 class_ref 256898 // Tienda
+  name "<<controlador>>"   xyz 188.9 42.5 2000 life_line_z 2000
+classinstance 128258 class_ref 257666 // Form1
+  name ""   xyz 116 42.5 2000 life_line_z 2000
+classinstance 128386 class_ref 255746 // Bicicleta
+  name ""   xyz 393 134.4 2005 life_line_z 2000
+classinstance 132098 class_ref 256386 // ListaBicicletas
+  name ""   xyz 465.4 42.5 2000 life_line_z 2000
+textcanvas 134018 "<<crear>>
+"
+  xyzwh 291 125.6 3010 59 19
+textcanvas 134786 "setIdBicicleta(_ultimoRegBici)"
+  xyzwh 264.6 191.3 3010 140 14
+textcanvas 135554 "ponElemento()"
+  xyzwh 340.5 304.9 2020 71 15
+textcanvas 135810 "anyadido <<bool>>"
+  xyzwh 333.2 332.2 2030 91 14
+textcanvas 137986 "anyadido<<bool>>"
+  xyzwh 154.4 364.8 2020 90 15
+durationcanvas 129666 classinstance_ref 128258 // :Form1
+  xyzwh 135 89.8 2010 11 303
+end
+durationcanvas 129794 classinstance_ref 128130 // <<controlador>>:Tienda
+  xyzwh 245 90 2010 11 299
+end
+durationcanvas 133762 classinstance_ref 128386 // :Bicicleta
+  xyzwh 415 200.6 2010 11 29
+end
+durationcanvas 135298 classinstance_ref 132098 // :ListaBicicletas
+  xyzwh 501 314.6 2010 11 40
+end
+lostfoundmsgsupport 133250 xyz 389.6 138 2015
+msg 129922 synchronous
+  from durationcanvas_ref 129666
+  to durationcanvas_ref 129794
+  yz 91.6 2015 explicitmsg "dar_Alta_Bici()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 158 76.6
+msg 133378 lost_synchronous
+  from durationcanvas_ref 129794
+  to lostfoundmsgsupport_ref 133250
+  yz 136 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133890 synchronous
+  from durationcanvas_ref 129794
+  to durationcanvas_ref 133762
+  yz 203 3005 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 135042 return
+  from durationcanvas_ref 133762
+  to durationcanvas_ref 129794
+  yz 217 3010 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 135426 synchronous
+  from durationcanvas_ref 129794
+  to durationcanvas_ref 135298
+  yz 317 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 135682 return
+  from durationcanvas_ref 135298
+  to durationcanvas_ref 129794
+  yz 343 2025 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 137858 return
+  from durationcanvas_ref 129794
+  to durationcanvas_ref 129666
+  yz 352.6 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

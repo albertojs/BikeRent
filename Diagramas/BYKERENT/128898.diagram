@@ -1,0 +1,38 @@
+format 76
+
+classinstance 128002 class_ref 208258 // Form1
+ name ""  xyz 87 146 2000
+classinstance 128130 class_ref 208386 // Tienda
+ name ""  xyz 299 145 2000
+classinstance 128258 class_ref 208642 // ListaClientes
+ name ""  xyz 482 145 2000
+linkcanvas 128386
+  from ref 128002 z 2001 to ref 128130
+dirscanvas 128642 z 1000 linkcanvas_ref 128386
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "1 modificarCliente()" xyz 171 126 3000
+linkcanvas 128514
+  from ref 128130 z 2001 to ref 128258
+dirscanvas 128898 z 1000 linkcanvas_ref 128514
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "2 DameElemento(posicion)
+4 modificarElemento(posicion)" xyz 343 109 3000
+  backward_label "3 ListaClientes" xyz 379 176 3000
+msgs
+  explicitmsg "modificarCliente()"
+    forward ranks 1 "1" dirscanvas_ref 128642
+    msgs
+      explicitmsg "DameElemento(posicion)"
+	forward ranks 2 "1.1" dirscanvas_ref 128898
+	msgs
+	  explicitmsg "ListaClientes"
+	    backward ranks 3 "1.1.1" dirscanvas_ref 128898
+	    msgs
+	      explicitmsg "modificarElemento(posicion)"
+		forward ranks 4 "1.1.1.1" dirscanvas_ref 128898
+		no_msg
+	    msgsend
+	msgsend
+    msgsend
+msgsend
+end

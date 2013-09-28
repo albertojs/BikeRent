@@ -1,0 +1,32 @@
+format 76
+
+classcanvas 128002 class_ref 241410 // Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 38 153 2000
+end
+usecasecanvas 128130 usecase_ref 197506 // Alta bicicleta
+  xyzwh 315 15 3005 64 32 label_xy 316 47
+end
+usecasecanvas 128258 usecase_ref 197634 // Baja bicicleta
+  xyzwh 319 86 3005 64 32 label_xy 319 118
+end
+usecasecanvas 128386 usecase_ref 197762 // Cosultar bicicleta
+  xyzwh 321 165 3005 64 32 label_xy 312 197
+end
+usecasecanvas 128514 usecase_ref 197890 // Modificar bicicleta
+  xyzwh 323 244 3005 64 32 label_xy 312 276
+end
+usecasecanvas 128642 usecase_ref 198018 // Asignar incidencia
+  xyzwh 326 328 3005 64 32 label_xy 314 360
+end
+line 129410 ---> decenter_end 592
+  from ref 128002 z 3006 to ref 128386
+line 129538 --->
+  from ref 128002 z 3006 to ref 128130
+line 129666 --->
+  from ref 128002 z 3006 to ref 128258
+line 129794 --->
+  from ref 128002 z 3006 to ref 128514
+line 129922 --->
+  from ref 128002 z 3006 to ref 128642
+end

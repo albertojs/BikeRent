@@ -1,0 +1,92 @@
+format 76
+
+classinstance 128130 class_ref 215938 // Form1
+  name ""   xyz 74 4 2000 life_line_z 2000
+classinstance 128258 class_ref 136450 // Tienda
+  name "<<controlador>>"   xyz 154 4 2000 life_line_z 2000
+classinstance 128386 class_ref 135042 // Incidencia
+  name ""   xyz 345 83 2000 life_line_z 2000
+classinstance 129154 class_ref 136066 // ListaIncidencias
+  name ""   xyz 419 4 2000 life_line_z 2000
+durationcanvas 128514 classinstance_ref 128130 // :Form1
+  xyzwh 93 79 2010 11 375
+end
+durationcanvas 128642 classinstance_ref 128258 // <<controlador>>:Tienda
+  xyzwh 211 90 2010 11 333
+end
+durationcanvas 130050 classinstance_ref 128386 // :Incidencia
+  xyzwh 371 149 2010 11 43
+end
+durationcanvas 130434 classinstance_ref 128386 // :Incidencia
+  xyzwh 371 205 2010 11 44
+end
+durationcanvas 130818 classinstance_ref 129154 // :ListaIncidencias
+  xyzwh 459 342 2010 11 31
+end
+durationcanvas 132354 classinstance_ref 128386 // :Incidencia
+  xyzwh 371 274 2010 11 25
+end
+lostfoundmsgsupport 128898 xyz 340 103 2020
+msg 128770 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128642
+  yz 92 2015 explicitmsg "dar_Alta_Incidencia()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 110 78
+msg 129026 lost_synchronous
+  from durationcanvas_ref 128642
+  to lostfoundmsgsupport_ref 128898
+  yz 101 2020 explicitmsg "<<create>>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 254 87
+msg 130178 synchronous
+  from durationcanvas_ref 128642
+  to durationcanvas_ref 130050
+  yz 162 2015 msg operation_ref 135298 // "concepto() : string"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 270 148
+msg 130306 return
+  from durationcanvas_ref 130050
+  to durationcanvas_ref 128642
+  yz 181 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130562 synchronous
+  from durationcanvas_ref 128642
+  to durationcanvas_ref 130434
+  yz 218 2015 msg operation_ref 135426 // "importe() : float"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 275 204
+msg 130690 return
+  from durationcanvas_ref 130434
+  to durationcanvas_ref 128642
+  yz 238 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130946 synchronous
+  from durationcanvas_ref 128642
+  to durationcanvas_ref 130818
+  yz 342 2015 explicitmsg "ponElemento()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 306 328
+msg 131074 return
+  from durationcanvas_ref 130818
+  to durationcanvas_ref 128642
+  yz 362 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132226 return
+  from durationcanvas_ref 128642
+  to durationcanvas_ref 128514
+  yz 388 2015 explicitmsg "<<bool>>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 135 374
+msg 132482 synchronous
+  from durationcanvas_ref 128642
+  to durationcanvas_ref 132354
+  yz 274 2015 explicitmsg "tipo()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 283 260
+msg 132610 return
+  from durationcanvas_ref 132354
+  to durationcanvas_ref 128642
+  yz 294 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

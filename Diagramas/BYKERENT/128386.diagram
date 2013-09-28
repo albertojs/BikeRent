@@ -1,0 +1,57 @@
+format 76
+
+classinstance 128002 class_ref 208258 // Form1
+  name ""   xyz 90 54 2000 life_line_z 2000
+classinstance 128130 class_ref 208386 // Tienda
+  name ""   xyz 248 55 2000 life_line_z 2000
+classinstance 128258 class_ref 208642 // ListaClientes
+  name ""   xyz 408 55 2005 life_line_z 2000
+durationcanvas 128386 classinstance_ref 128002 // :Form1
+  xyzwh 109 126 2010 11 206
+end
+durationcanvas 128514 classinstance_ref 128130 // :Tienda
+  xyzwh 267 127 2010 11 185
+end
+durationcanvas 128770 classinstance_ref 128258 // :ListaClientes
+  xyzwh 440 139 2010 11 73
+end
+durationcanvas 129666 classinstance_ref 128258 // :ListaClientes
+  xyzwh 440 232 2010 11 52
+end
+msg 128642 synchronous
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128514
+  yz 132 2015 explicitmsg "ModificarCliente()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 151 118
+msg 128898 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128770
+  yz 145 2015 explicitmsg "DameElementoPosicion()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 300 131
+msg 129026 return
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 128514
+  yz 180 2015 explicitmsg "Cliente"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 343 166
+msg 129794 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 129666
+  yz 232 2015 explicitmsg "ModificarElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 292 218
+msg 129922 return
+  from durationcanvas_ref 129666
+  to durationcanvas_ref 128514
+  yz 262 2015 explicitmsg "Modificado=True"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 319 248
+msg 130050 return
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128386
+  yz 292 2015 explicitmsg "Modificado<<bool>>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 145 278
+end

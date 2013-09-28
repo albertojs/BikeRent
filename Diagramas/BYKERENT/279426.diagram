@@ -1,0 +1,55 @@
+format 76
+
+classinstance 128002 class_ref 245762 // Form1
+  name ""   xyz 70 35 2000 life_line_z 2000
+classinstance 128130 class_ref 245122 // TransferTienda
+  name ""   xyz 185 38 2000 life_line_z 2000
+classinstance 128258 class_ref 245250 // DAOTienda
+  name ""   xyz 328 35 2000 life_line_z 2000
+classinstance 129026 class_ref 245890 // Fichero
+  name ""   xyz 448 37 2000 life_line_z 2000
+durationcanvas 128386 classinstance_ref 128002 // :Form1
+  xyzwh 89 123 2010 11 127
+end
+durationcanvas 128514 classinstance_ref 128130 // :TransferTienda
+  xyzwh 224 123 2010 11 29
+end
+durationcanvas 128770 classinstance_ref 128258 // :DAOTienda
+  xyzwh 357 141 2010 11 81
+end
+durationcanvas 129154 classinstance_ref 129026 // :Fichero
+  xyzwh 468 148 2010 11 42
+end
+msg 128642 synchronous
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128514
+  yz 123 2015 explicitmsg "salvarTienda()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 127 109
+msg 128898 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128770
+  yz 141 2020 explicitmsg "pasoDatos()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 265 127
+msg 129282 synchronous
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 129154
+  yz 148 2025 explicitmsg "salvar()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 399 134
+msg 129410 return
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 128770
+  yz 179 2015 explicitmsg "guardado"
+  stereotype "<<bool>>" xyz 396 193 3000
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 395 165
+msg 129538 return
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 128386
+  yz 211 2015 explicitmsg "guardado"
+  stereotype "<<bool>>" xyz 174 224 3000
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 174 196
+end

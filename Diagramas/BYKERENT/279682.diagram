@@ -1,0 +1,65 @@
+format 76
+
+classinstance 128002 class_ref 245762 // Form1
+  name ""   xyz 61 27 2000 life_line_z 2000
+classinstance 128130 class_ref 244994 // Tienda
+  name ""   xyz 170 29 2005 life_line_z 2000
+classinstance 129538 class_ref 244482 // ListaBicicletas
+  name ""   xyz 290 31 2000 life_line_z 2000
+fragment 130690 "if"
+  xyzwh 167 133 2015 192 166
+end
+textcanvas 131202 "_estadoBici ==Disponible
+"
+  xyzwh 204 185 2020 123 87
+textcanvas 131714 "borrado = true
+"
+  xyzwh 224 268 2025 80 29
+textcanvas 133378 "borrado <<bool>>"
+  xyzwh 103 308 2020 85 14
+durationcanvas 128386 classinstance_ref 128002 // :Form1
+  xyzwh 80 111 2010 11 378
+end
+durationcanvas 128514 classinstance_ref 128130 // :Tienda
+  xyzwh 189 112 2010 11 243
+end
+durationcanvas 130818 classinstance_ref 129538 // :ListaBicicletas
+  xyzwh 326 155 2010 11 58
+end
+durationcanvas 131330 classinstance_ref 129538 // :ListaBicicletas
+  xyzwh 326 245 2010 11 43
+end
+msg 128642 synchronous
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128514
+  yz 113 2015 explicitmsg "borraBici( nReg )"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 94 101
+msg 130946 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 130818
+  yz 156 2015 explicitmsg "getBicicleta(nReg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 210 143
+msg 131074 return
+  from durationcanvas_ref 130818
+  to durationcanvas_ref 128514
+  yz 194 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131458 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 131330
+  yz 245 2015 explicitmsg "borraElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 205 231
+msg 131586 return
+  from durationcanvas_ref 131330
+  to durationcanvas_ref 128514
+  yz 277 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133250 return
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128386
+  yz 318 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

@@ -1,0 +1,2060 @@
+format 76
+"Clases" // BYKERENT::MODELO DE DISEÑO::Clases
+  revision 9
+  modified_by 2 "Laura"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 214914 "Clases"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    classdiagram 293250 "Clases"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 255490 "Incidencia"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 206210 // <unidirectional association>
+	relation 203650 --->
+	  a role_name "" private
+	    classrelation_ref 206210 // <unidirectional association>
+	  b parent class_ref 255618 // Fecha
+      end
+
+      attribute 240898 "_incidenciasTotales"
+	class_attribute private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 241026 "_idIncidencia"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 241154 "_fechaCreacion"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 241282 "_fechaResolucion"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 241410 "_concepto"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 272642 "Incidencia"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 272770 "Incidencia"
+	public explicit_return_type ""
+	nparams 6
+	  param in name "fechaC" explicit_type "string"
+	  param in name "fechaR" explicit_type "string"
+	  param in name "idB" explicit_type "int"
+	  param in name "concepto" explicit_type "string"
+	  param in name "importe" explicit_type "float"
+	  param in name "est" explicit_type "EstadoInci"
+	
+	
+	
+	
+	
+      end
+
+      operation 272898 "estadoAString"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "estado" explicit_type "EstadoInci"
+	
+	
+	
+	
+	
+      end
+
+      operation 273026 "idIncidencia"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 273154 "fechaCreacion"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 273282 "fechaResolucion"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 273410 "idBici"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 273538 "concepto"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 273666 "importe"
+	public explicit_return_type "float"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 273794 "estadoI"
+	public explicit_return_type "EstadoInci"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 273922 "idIncidencia"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "idInc" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 274050 "fechaCreacion"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "fecha" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 274178 "fechaResolucion"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "fecha" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 274306 "idBici"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "idBic" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 274434 "concepto"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "concp" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 274562 "importe"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "impo" explicit_type "float"
+	
+	
+	
+	
+	
+      end
+
+      operation 274690 "estadoI"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "estado" explicit_type "EstadoInci"
+	
+	
+	
+	
+	
+      end
+
+      operation 274818 "mostrar"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 206338 // <unidirectional association>
+	relation 203778 --->
+	  a role_name "" private
+	    classrelation_ref 206338 // <unidirectional association>
+	  b parent class_ref 255618 // Fecha
+      end
+    end
+
+    class 255746 "Bicicleta"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 241538 "_id_bicicleta"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 241666 "_tamanyo"
+	private explicit_type "TamanyoBici"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 241794 "_tipo"
+	private explicit_type "TipoBici"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 241922 "_estado"
+	private explicit_type "EstadoBici"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 242050 "_precio_por_dia"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 274946 "Biclicleta"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 275074 "~Biclicleta"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 275202 "muestra"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 275330 "lee"
+	public return_type class_ref 255746 // Bicicleta
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 275458 "estadoAString"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "estado" explicit_type "EstadoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 275586 "tamanyoAString"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "tam" explicit_type "TamanyoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 275714 "tipoAString"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "tipo" explicit_type "TipoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 275842 "stringAEstado"
+	public explicit_return_type "EstadoBici"
+	nparams 1
+	  param in name "estado" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 275970 "stringATipo"
+	public explicit_return_type "TipoBici"
+	nparams 1
+	  param in name "tipo" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 276098 "setIdBicicleta"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 276226 "setTamanyo"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "tam" explicit_type "TamanyoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 276354 "setTipo"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "tipo" explicit_type "TipoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 276482 "setEstado"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "estado" explicit_type "EstadoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 276610 "setPrecioPorDia"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "precio" explicit_type "float"
+	
+	
+	
+	
+	
+      end
+
+      operation 276738 "getIdBicicleta"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 276866 "getTamanyo"
+	public explicit_return_type "TamanyoBici"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 276994 "getTipo"
+	public explicit_return_type "TipoBici"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 277122 "getEstado"
+	public explicit_return_type "EstadoBici"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 277250 "getPrecio"
+	public explicit_return_type "float"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 277378 "escribeEstado"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 255874 "Alquiler"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 206466 // <unidirectional association>
+	relation 203906 --->
+	  a role_name "" private
+	    classrelation_ref 206466 // <unidirectional association>
+	  b parent class_ref 255746 // Bicicleta
+      end
+
+      classrelation 206594 // <unidirectional association>
+	relation 204034 --->
+	  a role_name "" private
+	    classrelation_ref 206594 // <unidirectional association>
+	  b parent class_ref 255618 // Fecha
+      end
+
+      attribute 242178 "_idAlquiler"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 242306 "_fecha_alquiler"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 242434 "_fechaDevolucion"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 242562 "_idBici"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 242690 "_idCliente"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 242818 "_tipo_Bici"
+	private explicit_type "TipoBici"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 242946 "_precio_factura"
+	private explicit_type "float"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 277506 "Alquiler"
+	public explicit_return_type ""
+	nparams 6
+	  param in name "id" explicit_type "int"
+	  param in name "fAlquiler" explicit_type "string"
+	  param in name "fDevolucion" explicit_type "string"
+	  param in name "idBici" explicit_type "int"
+	  param in name "tipoBici" explicit_type "TipoBici"
+	  param in name "precio" explicit_type "float"
+	
+	
+	
+	
+	
+      end
+
+      operation 277634 "set_Id_Alquiler"
+	public explicit_return_type "vid"
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 277762 "set_fecha_alquiler"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "fecha" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 277890 "set_fecha_devolucion"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "fecha" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 278018 "set_id_bici"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 278146 "set_id_Cliente"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 278274 "set_tipo_bici"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "tipo" explicit_type "TipoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 278402 "set_precio_factura"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "precio" explicit_type "float"
+	
+	
+	
+	
+	
+      end
+
+      operation 278530 "get_fecha_Alquiler"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 278658 "get_id_alquiler"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 278786 "get_fecha_devolucion"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 278914 "get_id_bici"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 279042 "get_precio_factura"
+	public explicit_return_type "float"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 279170 "get_id_cliente"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 279298 "get_tipo_bici"
+	public explicit_return_type "TipoBici"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 279426 "mostrar"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 255618 "Fecha"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 256002 "ListaAlquileres"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 206722 // <unidirectional association>
+	relation 204162 --->
+	  a role_name "" private
+	    classrelation_ref 206722 // <unidirectional association>
+	  b parent class_ref 255874 // Alquiler
+      end
+    end
+
+    class 256130 "Cliente"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 206850 // <unidirectional association>
+	relation 204290 --->
+	  a role_name "" private
+	    classrelation_ref 206850 // <unidirectional association>
+	  b parent class_ref 256002 // ListaAlquileres
+      end
+
+      attribute 243074 "_id_Cliente"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 243202 "_dni"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 243330 "_nombre"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 243458 "_apellidos"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 243586 "_direccion"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 243714 "_telefono"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 243842 "_listaAlquileres"
+	private type class_ref 256002 // ListaAlquileres
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 279554 "set_id_cliente"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 279682 "set_dni"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "dni" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 279810 "set_nombrev"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "nom" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 279938 "set_Apellidos"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "ap" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 280066 "set_direccion"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "dir" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 280194 "set_Telefono"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "tlf" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 280322 "set_ListaAlquileres"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "otros" type class_ref 256002 // ListaAlquileres
+	
+	
+	
+	
+	
+      end
+
+      operation 280450 "get_nombre"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 280578 "get_apellidos"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 280706 "get_direccion"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 280834 "get_dni"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 280962 "get_telefono"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 281090 "get_Id_Cliente"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 281218 "get_Lista_alquileres"
+	public return_type class_ref 256002 // ListaAlquileres
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 281346 "mostrar"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 256258 "ListaClientes"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 206978 // <unidirectional association>
+	relation 204418 --->
+	  a role_name "" private
+	    classrelation_ref 206978 // <unidirectional association>
+	  b parent class_ref 256130 // Cliente
+      end
+    end
+
+    class 256386 "ListaBicicletas"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 207106 // <unidirectional association>
+	relation 204546 --->
+	  a role_name "" private
+	    classrelation_ref 207106 // <unidirectional association>
+	  b parent class_ref 255746 // Bicicleta
+      end
+
+      classrelation 207234 // <unidirectional association>
+	relation 204674 --->
+	  a role_name "" private
+	    classrelation_ref 207234 // <unidirectional association>
+	  b parent class_ref 255746 // Bicicleta
+      end
+    end
+
+    class 256514 "ListaIncidencias"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 207362 // <unidirectional association>
+	relation 204802 --->
+	  a role_name "" private
+	    classrelation_ref 207362 // <unidirectional association>
+	  b parent class_ref 255490 // Incidencia
+      end
+    end
+
+    class 256642 "Oferta"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 243970 "_idOferta"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 244098 "_tipo_Bici"
+	private explicit_type "TipoBici"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 244226 "_num_Alquileres"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 244354 "_descuento"
+	private explicit_type "float"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 281474 "set_id_oferta"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 281602 "set_tipo_bici"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "tipo" explicit_type "TipoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 281730 "set_num_alquileres"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "num" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 281858 "set_descuento"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "desc" explicit_type "float"
+	
+	
+	
+	
+	
+      end
+
+      operation 281986 "get_id_oferta"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 282114 "get_tipo_bici"
+	public explicit_return_type "TipoBici"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 282242 "get_num_alquileres"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 282370 "get_descuento"
+	public explicit_return_type "float"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 282498 "mostrar"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 256770 "ListaOfertas"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 207490 // <unidirectional association>
+	relation 204930 --->
+	  a role_name "" private
+	    classrelation_ref 207490 // <unidirectional association>
+	  b parent class_ref 256642 // Oferta
+      end
+    end
+
+    class 256898 "Tienda"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 207618 // <unidirectional association>
+	relation 205058 --->
+	  a role_name "" private
+	    classrelation_ref 207618 // <unidirectional association>
+	  b parent class_ref 256514 // ListaIncidencias
+      end
+
+      classrelation 207746 // <unidirectional association>
+	relation 205186 --->
+	  a role_name "" private
+	    classrelation_ref 207746 // <unidirectional association>
+	  b parent class_ref 256386 // ListaBicicletas
+      end
+
+      classrelation 207874 // <unidirectional association>
+	relation 205314 --->
+	  a role_name "" private
+	    classrelation_ref 207874 // <unidirectional association>
+	  b parent class_ref 256258 // ListaClientes
+      end
+
+      classrelation 208002 // <unidirectional association>
+	relation 205442 --->
+	  a role_name "" private
+	    classrelation_ref 208002 // <unidirectional association>
+	  b parent class_ref 256770 // ListaOfertas
+      end
+
+      classrelation 208130 // <unidirectional association>
+	relation 205570 --->
+	  a role_name "" private
+	    classrelation_ref 208130 // <unidirectional association>
+	  b parent class_ref 257026 // TransferTienda
+      end
+
+      attribute 244482 "_bicis"
+	protected type class_ref 256386 // ListaBicicletas
+	stereotype "list"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 244610 "_clientes"
+	protected type class_ref 256258 // ListaClientes
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 244738 "_ofertas"
+	protected type class_ref 256770 // ListaOfertas
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 244866 "_incidencias"
+	protected type class_ref 256514 // ListaIncidencias
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 244994 "_ultimoRegBici"
+	protected explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 245122 "_ultimoCodCliente"
+	protected explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 245250 "_ultimoRegOferta"
+	protected explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 245378 "_ultimoIdIncidencia"
+	protected explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 282626 "anyadeBici"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "nuevaBici" type class_ref 255746 // Bicicleta
+	
+	
+	
+	
+	
+      end
+
+      operation 282754 "buscaBiciPorRegistro"
+	public explicit_return_type "bool"
+	nparams 2
+	  param in name "numRegistro" explicit_type "int"
+	  param out name "bici" type class_ref 255746 // Bicicleta
+	
+	
+	
+	
+	
+      end
+
+      operation 282882 "borrabici"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "numRegistro" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 283010 "muestraBicis"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 283138 "modificarBici"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "numRegistro" explicit_type "int"
+	  param in name "bici" type class_ref 255746 // Bicicleta
+	
+	
+	
+	
+	
+      end
+
+      operation 283266 "anyadeCliente"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "nuevoCliente" type class_ref 256130 // Cliente
+	
+	
+	
+	
+	
+      end
+
+      operation 283394 "buscaClientePorCodigo"
+	public explicit_return_type "bool"
+	nparams 2
+	  param in name "numCodigo" explicit_type "int"
+	  param out name "cliente" type class_ref 256130 // Cliente
+	
+	
+	
+	
+	
+      end
+
+      operation 283522 "borraCliente"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "numCodigo" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 283650 "muestraClientes"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 283778 "muestraAlquileres"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 283906 "ponUltimoRegBici"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "numLibros" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 284034 "dameUltimoRegBici"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 284162 "ponUltimoCodCliente"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "codCliente" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 284290 "dameUltimoCodCliente"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 284418 "dameBicis"
+	public return_type class_ref 256386 // ListaBicicletas
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 284546 "dameClientes"
+	public return_type class_ref 256258 // ListaClientes
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 284674 "dameOfertas"
+	public return_type class_ref 256770 // ListaOfertas
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 284802 "anyadeOferta"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "nuevaOferta" type class_ref 256642 // Oferta
+	
+	
+	
+	
+	
+      end
+
+      operation 284930 "ponUltimoRegOferta"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "numOfertas" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 285058 "dameUltimoRegOferta"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 285186 "buscaOfertaPorRegistro"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "numRegistro" explicit_type "int"
+	  param out name "oferta" type class_ref 256642 // Oferta
+	
+	
+	
+	
+	
+      end
+
+      operation 285314 "borraOferta"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "numRegistro" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 285442 "modificarOferta"
+	public explicit_return_type "bool"
+	nparams 2
+	  param in name "numRegistro" explicit_type "int"
+	  param out name "oferta" type class_ref 256642 // Oferta
+	
+	
+	
+	
+	
+      end
+
+      operation 285570 "buscaClientePorDNI"
+	public explicit_return_type "bool"
+	nparams 2
+	  param in name "DNI" explicit_type "string"
+	  param out name "cliente" type class_ref 256130 // Cliente
+	
+	
+	
+	
+	
+      end
+
+      operation 285698 "buscaIncidenciaPorId"
+	public explicit_return_type "bool"
+	nparams 2
+	  param in name "id" explicit_type "int"
+	  param out name "incidencia" type class_ref 255490 // Incidencia
+	
+	
+	
+	
+	
+      end
+
+      operation 285826 "anyadeIncidencia"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "incidencia" type class_ref 255490 // Incidencia
+	
+	
+	
+	
+	
+      end
+
+      operation 285954 "borraIncidencia"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 286082 "dameUltimoIdIncidencia"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 286210 "ponUltimoIdIncidencia"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "ultimo" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 286338 "dameIncidencias"
+	public return_type class_ref 256514 // ListaIncidencias
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 208258 // <unidirectional association>
+	relation 205698 --->
+	  a role_name "" private
+	    classrelation_ref 208258 // <unidirectional association>
+	  b parent class_ref 255746 // Bicicleta
+      end
+
+      classrelation 208386 // <unidirectional association>
+	relation 205826 --->
+	  a role_name "" private
+	    classrelation_ref 208386 // <unidirectional association>
+	  b parent class_ref 256002 // ListaAlquileres
+      end
+    end
+
+    class 257026 "TransferTienda"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 208514 // <unidirectional association>
+	relation 205954 --->
+	  a role_name "" private
+	    classrelation_ref 208514 // <unidirectional association>
+	  b parent class_ref 257154 // DAOTienda
+      end
+    end
+
+    class 257154 "DAOTienda"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 257282 "FormPrincipal"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 208642 // <unidirectional association>
+	relation 206082 --->
+	  a role_name "" private
+	    classrelation_ref 208642 // <unidirectional association>
+	  b parent class_ref 256898 // Tienda
+      end
+    end
+
+    class 257410 "IncidenciaEmpleado"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 208770 // <realization>
+	relation 206210 -_-|>
+	  a public
+	    classrelation_ref 208770 // <realization>
+	  b parent class_ref 255490 // Incidencia
+      end
+
+      attribute 245506 "_nombre"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 286466 "IncidenciasEmpleados"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 286594 "IncidenciasEmpleado"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "nombre" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 286722 "cadenaParaMostrar"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 286850 "setNombre"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "nom" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 286978 "getNombre"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 287106 "mostrar"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 257538 "IncidenciasBici"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 208898 // <realization>
+	relation 206338 -_-|>
+	  a public
+	    classrelation_ref 208898 // <realization>
+	  b parent class_ref 255490 // Incidencia
+      end
+
+      attribute 245634 "_importe"
+	private explicit_type "float"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 245762 "_estadoI"
+	private explicit_type "EstadoInci"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 245890 "_idBici"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 287234 "IncidenciasBici"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "importe" explicit_type "float"
+	  param in name "est" explicit_type "EstadoBici"
+	  param in name "idBici" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 287362 "mostrar"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 287490 "cadenaParaMostrar"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 287618 "estadoAString"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "estado" explicit_type "EstadoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 287746 "setImporte"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "imp" explicit_type "float"
+	
+	
+	
+	
+	
+      end
+
+      operation 287874 "setEstadoI"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "estado" explicit_type "EstadoBici"
+	
+	
+	
+	
+	
+      end
+
+      operation 288002 "sedIdBici"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 288130 "getEstado"
+	public explicit_return_type "EstadoBici"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 288258 "getImporte"
+	public explicit_return_type "float"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 288386 "getIdBici"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+  end
+end

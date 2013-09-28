@@ -1,0 +1,62 @@
+format 76
+
+classinstance 128002 class_ref 257666 // Form1
+  name ""   xyz 84 68 2000 life_line_z 2000
+classinstance 128130 class_ref 256898 // Tienda
+  name ""   xyz 208 68 2000 life_line_z 2000
+classinstance 128258 class_ref 256386 // ListaBicicletas
+  name ""   xyz 374 65 2000 life_line_z 2000
+textcanvas 129666 "_bicis
+"
+  xyzwh 281 206 2035 29 28
+textcanvas 130178 "modificado = true
+"
+  xyzwh 282 321 2020 83 28
+textcanvas 132226 "modificado <<bool>>"
+  xyzwh 123 326 2025 99 14
+durationcanvas 128386 classinstance_ref 128002 // :Form1
+  xyzwh 103 140 2010 11 242
+end
+durationcanvas 128514 classinstance_ref 128130 // :Tienda
+  xyzwh 227 139 2010 11 222
+end
+durationcanvas 128770 classinstance_ref 128258 // :ListaBicicletas
+  xyzwh 410 166 2010 11 80
+end
+durationcanvas 129794 classinstance_ref 128258 // :ListaBicicletas
+  xyzwh 410 302 2010 11 44
+end
+msg 128642 synchronous
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128514
+  yz 141 2015 msg operation_ref 283138 // "modificarBici(in numRegistro : int, in bici : Bicicleta)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 133 127
+msg 128898 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128770
+  yz 166 2015 explicitmsg "dameElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 244 152
+msg 129538 return
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 128514
+  yz 216 2030 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129922 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 129794
+  yz 302 2015 explicitmsg "modificaElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 258 288
+msg 130050 return
+  from durationcanvas_ref 129794
+  to durationcanvas_ref 128514
+  yz 327 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132098 return
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128386
+  yz 342 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

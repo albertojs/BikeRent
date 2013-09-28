@@ -1,0 +1,60 @@
+format 76
+
+usecasecanvas 128514 usecase_ref 222850 // Alta oferta
+  xyzwh 368 192 3005 64 32 label_xy 374 224
+end
+usecasecanvas 128642 usecase_ref 223490 // Baja oferta 
+  xyzwh 197 43 3005 64 32 label_xy 201 75
+end
+usecasecanvas 128770 usecase_ref 223618 // Modificar oferta
+  xyzwh 212 249 3005 64 32 label_xy 206 281
+end
+usecasecanvas 128898 usecase_ref 223746 // Cosultar oferta
+  xyzwh 317 362 3005 64 32 label_xy 313 394
+end
+classcanvas 129026 class_ref 255362 // Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 36 193 2000
+end
+usecasecanvas 129666 usecase_ref 222978 // introducir ID_oferta
+  xyzwh 586 56 3005 64 32 label_xy 572 88
+end
+usecasecanvas 129794 usecase_ref 223106 // introducir tipo_bici
+  xyzwh 583 131 3005 64 32 label_xy 574 162
+end
+usecasecanvas 129922 usecase_ref 223234 // introducir num_alq_dcto
+  xyzwh 581 223 3005 64 32 label_xy 556 255
+end
+usecasecanvas 130050 usecase_ref 223362 // introducir descuento
+  xyzwh 581 306 3005 64 32 label_xy 564 338
+end
+line 129154 --->
+  from ref 129026 z 3006 to ref 128514
+line 129282 --->
+  from ref 129026 z 3006 to ref 128642
+line 129410 --->
+  from ref 129026 z 3006 to ref 128770
+line 129538 --->
+  from ref 129026 z 3006 to ref 128898
+simplerelationcanvas 130178 simplerelation_ref 209282
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 476 139 3000 to ref 129666
+end
+simplerelationcanvas 130306 simplerelation_ref 209410
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 478 174 3000 to ref 129794
+end
+simplerelationcanvas 130434 simplerelation_ref 209538
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 477 221 3000 to ref 129922
+end
+simplerelationcanvas 130562 simplerelation_ref 209666
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 479 264 3000 to ref 130050
+end
+simplerelationcanvas 130690 simplerelation_ref 209794
+  from ref 128642 z 3006 stereotype "<<include>>" xyz 284.5 132 3000 to ref 128514
+end
+simplerelationcanvas 130818 simplerelation_ref 209922
+  from ref 128770 z 3006 stereotype "<<include>>" xyz 292 233 3000 to ref 128514
+end
+simplerelationcanvas 130946 simplerelation_ref 210050
+  from ref 128898 z 3006 stereotype "<<include>>" xyz 343 292 3000 to ref 128514
+end
+end

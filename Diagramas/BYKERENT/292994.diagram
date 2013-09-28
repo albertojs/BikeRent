@@ -1,0 +1,65 @@
+format 76
+
+pseudostatecanvas 128002 pseudostate_ref 169730 // initial
+   xyz 58 27 2000
+end
+pseudostatecanvas 128130 pseudostate_ref 169858 // final
+   xyz 303 301 2000
+end
+statecanvas 128258 state_ref 174978 // Solicitar datos bicicleta
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 191 117 2000 147 33
+end
+statecanvas 128386 state_ref 175234 // Buscar bicicletas
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 342 211 2000 113 33
+end
+statecanvas 128514 state_ref 175106 // Notificar si no hay
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 105 209 2000 117 33
+end
+textcanvas 129410 "solicitar consulta bicicleta"
+  xyzwh 154 44 2000 82 29
+textcanvas 129666 "no existen bicicletas con esos datos"
+  xyzwh 120 149 2006 74 44
+textcanvas 129794 "existen bicicletas con esos datos"
+  xyzwh 346 143 2000 77 46
+textcanvas 129922 "se listan las bicicletas con los datos seleccionados"
+  xyzwh 354 274 2000 121 49
+textcanvas 130050 "error al consulta"
+  xyzwh 176 263 2000 58 43
+note 130434 "DATOS BICICLETA
+Tamaño (Montaña, Carretera ,Paseo, Nulo)
+Tipo (Montaña, Carretera, Paseo, Nulo)
+Estado (Disponible, Alquilada, enTaller, Nulo)
+"
+  xyzwh 358.5 15.5 2000 239 89
+transitioncanvas 128642 transition_ref 177026 // <transition>
+  
+  from ref 128002 z 2001 to ref 128258
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 128770 transition_ref 177154 // <transition>
+  decenter_end 409
+  
+  from ref 128258 z 2001 to ref 128514
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 128898 transition_ref 177282 // <transition>
+  
+  from ref 128258 z 2001 to ref 128386
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129026 transition_ref 177410 // <transition>
+  decenter_begin 238
+  
+  from ref 128386 z 2001 to ref 128130
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129154 transition_ref 177538 // <transition>
+  decenter_begin 708
+  
+  from ref 128514 z 2001 to ref 128130
+  write_horizontally default show_definition default drawing_language default
+end
+end

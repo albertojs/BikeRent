@@ -1,0 +1,259 @@
+format 76
+"Transición de estados" // MODELO DATOS::MODELO DE DISEÑO::Transición de estados
+  revision 6
+  modified_by 2 "Laura"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 214786 "Bicicleta"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    state 172802 "Alta bicicleta"
+      stereotype "machine"
+      statediagram 292610 "Alta"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 168962 initial 
+	transition 174466 "<transition>"
+	  on state_ref 172930 // Solicictar datos de bicicleta
+	  external 
+	end
+      end
+
+      pseudostate 169090 final 
+      end
+
+      state 172930 "Solicictar datos de bicicleta"
+	transition 174594 "<transition>"
+	  on state_ref 173058 // Validando datos
+	  external 
+	end
+
+	transition 174722 "<transition>"
+	  on state_ref 173186 // Notificar si no es posible
+	  external 
+	end
+      end
+
+      state 173058 "Validando datos"
+	transition 174850 "<transition>"
+	  on pseudostate_ref 169090 // final
+	  external 
+	end
+      end
+
+      state 173186 "Notificar si no es posible"
+	transition 174978 "<transition>"
+	  on pseudostate_ref 169090 // final
+	  external 
+	end
+      end
+    end
+
+    state 173314 "Baja bicicleta"
+      stereotype "machine"
+      statediagram 292738 "Baja"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 169218 initial 
+	transition 175106 "<transition>"
+	  on state_ref 173442 // Solicitar ID bicicleta
+	  external 
+	end
+      end
+
+      pseudostate 169346 final 
+      end
+
+      state 173442 "Solicitar ID bicicleta"
+	transition 175234 "<transition>"
+	  on state_ref 173570 // Buscar bicicleta
+	  external 
+	end
+      end
+
+      state 173698 "Validando datos"
+	transition 175362 "<transition>"
+	  on pseudostate_ref 169346 // final
+	  external 
+	end
+      end
+
+      state 173570 "Buscar bicicleta"
+	transition 175490 "<transition>"
+	  on state_ref 173826 // Notificar si no existe la bicicleta
+	  external 
+	end
+
+	transition 175618 "<transition>"
+	  on state_ref 173698 // Validando datos
+	  external 
+	end
+      end
+
+      state 173826 "Notificar si no existe la bicicleta"
+	transition 175746 "<transition>"
+	  on pseudostate_ref 169346 // final
+	  external 
+	end
+      end
+    end
+
+    state 173954 "Modificacion bicicleta"
+      stereotype "machine"
+      statediagram 292866 "Modificacion"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 169474 initial 
+	transition 175874 "<transition>"
+	  on state_ref 174082 // Solicitar ID bicicleta
+	  external 
+	end
+      end
+
+      pseudostate 169602 final 
+      end
+
+      state 174082 "Solicitar ID bicicleta"
+	transition 176002 "<transition>"
+	  on state_ref 174210 // Buscar bicicleta
+	  external 
+	end
+      end
+
+      state 174210 "Buscar bicicleta"
+	transition 176130 "<transition>"
+	  on state_ref 174338 // Cambiar datos
+	  external 
+	end
+
+	transition 176258 "<transition>"
+	  on state_ref 174466 // Notificar si no existe la bicicleta
+	  external 
+	end
+      end
+
+      state 174466 "Notificar si no existe la bicicleta"
+	transition 176386 "<transition>"
+	  on pseudostate_ref 169602 // final
+	  external 
+	end
+      end
+
+      state 174594 "Validando datos"
+	transition 176514 "<transition>"
+	  on pseudostate_ref 169602 // final
+	  external 
+	end
+      end
+
+      state 174338 "Cambiar datos"
+	transition 176642 "<transition>"
+	  on state_ref 174594 // Validando datos
+	  external 
+	end
+
+	transition 176770 "<transition>"
+	  on state_ref 174722 // Notificar si no es posible
+	  external 
+	end
+      end
+
+      state 174722 "Notificar si no es posible"
+	transition 176898 "<transition>"
+	  on pseudostate_ref 169602 // final
+	  external 
+	end
+      end
+    end
+
+    state 174850 "Consulta bicicleta"
+      stereotype "machine"
+      statediagram 292994 "Consulta"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 169730 initial 
+	transition 177026 "<transition>"
+	  on state_ref 174978 // Solicitar datos bicicleta
+	  external 
+	end
+      end
+
+      pseudostate 169858 final 
+      end
+
+      state 174978 "Solicitar datos bicicleta"
+	transition 177154 "<transition>"
+	  on state_ref 175106 // Notificar si no hay
+	  external 
+	end
+
+	transition 177282 "<transition>"
+	  on state_ref 175234 // Buscar bicicletas
+	  external 
+	end
+      end
+
+      state 175234 "Buscar bicicletas"
+	transition 177410 "<transition>"
+	  on pseudostate_ref 169858 // final
+	  external 
+	end
+      end
+
+      state 175106 "Notificar si no hay"
+	transition 177538 "<transition>"
+	  on pseudostate_ref 169858 // final
+	  external 
+	end
+      end
+    end
+
+  end
+end

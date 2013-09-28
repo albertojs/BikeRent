@@ -1,0 +1,27 @@
+format 76
+
+classcanvas 128002 class_ref 253314 // Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 45 167 2000
+end
+usecasecanvas 128130 usecase_ref 215426 // Alta incidencia
+  xyzwh 294 17 3005 64 32 label_xy 291 49
+end
+usecasecanvas 128258 usecase_ref 215554 // Baja incidencia
+  xyzwh 288 114 3005 64 32 label_xy 284 146
+end
+usecasecanvas 128386 usecase_ref 215682 // Consutar incidencia
+  xyzwh 288 233 3005 64 32 label_xy 273 265
+end
+usecasecanvas 128514 usecase_ref 215810 // Modificar incidencia
+  xyzwh 289 317 3005 64 32 label_xy 274 349
+end
+line 128642 --->
+  from ref 128002 z 3006 to ref 128130
+line 128770 --->
+  from ref 128002 z 3006 to ref 128258
+line 128898 --->
+  from ref 128002 z 3006 to ref 128386
+line 129026 --->
+  from ref 128002 z 3006 to ref 128514
+end

@@ -1,0 +1,69 @@
+format 76
+
+classinstance 128002 class_ref 257922 // Form1
+  name ""   xyz 62 54 2000 life_line_z 2000
+classinstancecanvas 128130 classinstance_ref 160770 // <<Controlador>>
+  xyz 180 53 2000 life_line_z 2000
+end
+classinstance 128258 class_ref 258178 // Cliente
+  name ""   xyz 375 131 2000 life_line_z 2000
+classinstance 128386 class_ref 258306 // ListaClientes
+  name ""   xyz 513 54 2000 life_line_z 2000
+durationcanvas 128514 classinstance_ref 128002 // :Form1
+  xyzwh 81 123 2010 11 308
+end
+durationcanvas 128642 classinstance_ref 128130 // <<Controlador>>:Tienda
+  xyzwh 238 109 2010 11 269
+end
+durationcanvas 129410 classinstance_ref 128130 // <<Controlador>>:Tienda
+  xyzwh 238 206 2010 11 40
+end
+durationcanvas 129538 classinstance_ref 128258 // :Cliente
+  xyzwh 394 207 2010 11 52
+end
+durationcanvas 129922 classinstance_ref 128386 // :ListaClientes
+  xyzwh 545 282 2010 11 54
+end
+lostfoundmsgsupport 129154 xyz 373 143 2020
+msg 128770 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128642
+  yz 124 2015 explicitmsg "Dar_De_Alta_Cliente()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 112 110
+msg 129282 lost_synchronous
+  from durationcanvas_ref 128642
+  to lostfoundmsgsupport_ref 129154
+  yz 141 2020 explicitmsg "<<crear>>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 286 127
+msg 129666 synchronous
+  from durationcanvas_ref 129410
+  to durationcanvas_ref 129538
+  yz 207 2015 explicitmsg "setIdCliente(RegistroUltCliente)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 248 193
+msg 129794 return
+  from durationcanvas_ref 129538
+  to durationcanvas_ref 128642
+  yz 230 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130050 synchronous
+  from durationcanvas_ref 128642
+  to durationcanvas_ref 129922
+  yz 282 2015 explicitmsg "ponElemento()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 341 270
+msg 130178 return
+  from durationcanvas_ref 129922
+  to durationcanvas_ref 128642
+  yz 314 2020 explicitmsg "anyadido<<bool>>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 353 300
+msg 130306 return
+  from durationcanvas_ref 128642
+  to durationcanvas_ref 128514
+  yz 348 2015 explicitmsg "anyadido<<bool>>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 121 334
+end

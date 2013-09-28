@@ -1,0 +1,52 @@
+format 76
+
+classinstance 132226 class_ref 143362 // Form1
+ name ""  xyz 22.5 164.5 2000
+classinstance 132354 class_ref 200962 // ListaOfertas
+ name ""  xyz 565.5 158 2005
+classinstance 132610 class_ref 200194 // ListaAlquileres
+ name ""  xyz 271.5 290.5 2000
+classinstance 132738 class_ref 200450 // ListaClientes
+ name ""  xyz 275.5 33 2000
+classinstance 132866 class_ref 201090 // Tienda
+ name "<<controlador>>"  xyz 251.5 164.5 2000
+linkcanvas 133250
+  from ref 132738 z 2001 to ref 132866
+dirscanvas 133378 z 1000 linkcanvas_ref 133250
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "2 getIdCliente()" xyz 332 104 3000
+linkcanvas 134018
+  from ref 132226 z 2001 to ref 132866
+dirscanvas 134146 z 1000 linkcanvas_ref 134018
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "1 aplicarOferta()" xyz 121 145 3000
+  backward_label "5 descuentoPrecioFinal" xyz 104 195 3000
+linkcanvas 134402
+  from ref 132866 z 2001 to ref 132610
+dirscanvas 134530 z 1000 linkcanvas_ref 134402
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  backward_label "3 alquileresSuficientes" xyz 184 232 3000
+linkcanvas 135042 decenter_end 652
+  from ref 132866 z 2006 to ref 132354
+dirscanvas 135170 z 1000 linkcanvas_ref 135042
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  backward_label "4 getIdOferta()" xyz 434 193 3000
+msgs
+  explicitmsg "aplicarOferta()"
+    forward ranks 1 "1" dirscanvas_ref 134146
+    no_msg
+  explicitmsg "getIdCliente()"
+    forward ranks 2 "2" dirscanvas_ref 133378
+    no_msg
+  explicitmsg "alquileresSuficientes"
+    backward ranks 3 "3" dirscanvas_ref 134530
+    no_msg
+  explicitmsg "getIdOferta()"
+    backward ranks 4 "4" dirscanvas_ref 135170
+    msgs
+      explicitmsg "descuentoPrecioFinal"
+	backward ranks 5 "4.1" dirscanvas_ref 134146
+	no_msg
+    msgsend
+msgsend
+end

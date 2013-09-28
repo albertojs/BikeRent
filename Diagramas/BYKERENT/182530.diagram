@@ -1,0 +1,61 @@
+format 76
+
+classinstance 128002 class_ref 257666 // Form1
+  name ""   xyz 69 48 2000 life_line_z 2000
+classinstance 128130 class_ref 257026 // TransferTienda
+  name ""   xyz 193 47 2000 life_line_z 2000
+classinstance 128898 class_ref 257154 // DAOTienda
+  name ""   xyz 350 50 2000 life_line_z 2000
+classinstance 129026 class_ref 257794 // Fichero
+  name ""   xyz 464 49 2000 life_line_z 2000
+durationcanvas 128258 classinstance_ref 128002 // :Form1
+  xyzwh 88 118 2010 11 96
+end
+durationcanvas 128386 classinstance_ref 128130 // :TransferTienda
+  xyzwh 232 118 2010 11 68
+end
+durationcanvas 129154 classinstance_ref 128898 // :DAOTienda
+  xyzwh 379 136 2010 11 48
+end
+durationcanvas 129410 classinstance_ref 129026 // :Fichero
+  xyzwh 484 145 2010 11 35
+end
+msg 128514 synchronous
+  from durationcanvas_ref 128258
+  to durationcanvas_ref 128386
+  yz 119 2015 explicitmsg "cargarTienda()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  args "c"
+  label_xy 126 105
+msg 129282 synchronous
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 129154
+  yz 136 2015 explicitmsg "dameDatos()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 280 122
+msg 129538 synchronous
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 129410
+  yz 145 2015 explicitmsg "cargar"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 421 131
+msg 129666 return
+  from durationcanvas_ref 129410
+  to durationcanvas_ref 129154
+  yz 169 2015 explicitmsg "datos"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 424 155
+msg 129794 return
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 128386
+  yz 173 2015 explicitmsg "Tienda"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 295 159
+msg 129922 return
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128258
+  yz 175 2015 explicitmsg "cargado"
+  stereotype "<<bool>>" xyz 143 189 3000
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 145 161
+end

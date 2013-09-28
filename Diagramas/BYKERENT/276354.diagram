@@ -1,0 +1,111 @@
+format 76
+
+classcanvas 128002 class_ref 241282 // Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 398 994 2000
+end
+usecasecanvas 128130 usecase_ref 195714 // Baja
+  xyzwh 755 481 3005 64 32 label_xy 776 513
+end
+usecasecanvas 128258 usecase_ref 195842 // Consulta
+  xyzwh 28 475 3005 64 32 label_xy 39 507
+end
+usecasecanvas 128386 usecase_ref 195970 // Alta
+  xyzwh 1 91 3005 64 32 label_xy 23 123
+end
+usecasecanvas 128514 usecase_ref 197378 // Modificacion
+  xyzwh 748 93 3005 64 32 label_xy 769 128
+end
+usecasecanvas 128642 usecase_ref 196098 // Asignar Alquiler
+  xyzwh 375 30 3005 64 32 label_xy 369 62
+end
+usecasecanvas 128770 usecase_ref 196226 // Asignar Oferta
+  xyzwh 380 148 3005 64 32 label_xy 376 180
+end
+usecasecanvas 128898 usecase_ref 196354 // Quitar Alquiler
+  xyzwh 377 89 3005 64 32 label_xy 375 121
+end
+usecasecanvas 129026 usecase_ref 196482 // Quitar Oferta
+  xyzwh 379 210 3005 64 32 label_xy 379 242
+end
+usecasecanvas 130690 usecase_ref 196610 // Asignar Cliente
+  xyzwh 377 273 3005 64 32 label_xy 373 305
+end
+usecasecanvas 130818 usecase_ref 196738 // Quitar Cliente
+  xyzwh 377 350 3005 64 32 label_xy 377 382
+end
+usecasecanvas 130946 usecase_ref 196866 // Asignar Incidencia
+  xyzwh 381 439 3005 64 32 label_xy 369 471
+end
+usecasecanvas 131074 usecase_ref 196994 // Quitar Incidencia
+  xyzwh 388 545 3005 64 32 label_xy 380 577
+end
+usecasecanvas 132226 usecase_ref 197250 // Asignar Bicicleta
+  xyzwh 390 680 3005 64 32 label_xy 382 712
+end
+usecasecanvas 132354 usecase_ref 197122 // Quitar Bicicleta
+  xyzwh 398 816 3005 64 32 label_xy 394 848
+end
+simplerelationcanvas 129538 simplerelation_ref 187906
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 566 164 3000 to ref 129026
+end
+simplerelationcanvas 129666 simplerelation_ref 186498
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 190 73 3000 to ref 128642
+end
+simplerelationcanvas 129794 simplerelation_ref 186626
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 192 132 3000 to ref 128770
+end
+simplerelationcanvas 129922 simplerelation_ref 186754
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 191 103 3000 to ref 128898
+end
+simplerelationcanvas 130050 simplerelation_ref 186882
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 192 164 3000 to ref 129026
+end
+line 130178 ----
+  from ref 128002 z 3006 to ref 128130
+line 130306 ----
+  from ref 128002 z 3006 to ref 128258
+line 130434 ----
+  from ref 128386 z 3006 to ref 128002
+line 130562 ----
+  from ref 128002 z 3006 to ref 128514
+simplerelationcanvas 131202 simplerelation_ref 187010
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 191 195 3000 to ref 130690
+end
+simplerelationcanvas 131330 simplerelation_ref 187138
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 192 235 3000 to ref 130818
+end
+simplerelationcanvas 131458 simplerelation_ref 187266
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 193 280 3000 to ref 130946
+end
+simplerelationcanvas 131586 simplerelation_ref 187394
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 197 332 3000 to ref 131074
+end
+simplerelationcanvas 131714 simplerelation_ref 188034
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 563 196 3000 to ref 130690
+end
+simplerelationcanvas 131842 simplerelation_ref 188162
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 561 236 3000 to ref 130818
+end
+simplerelationcanvas 131970 simplerelation_ref 188290
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 562 280 3000 to ref 130946
+end
+simplerelationcanvas 132098 simplerelation_ref 188418
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 568 333 3000 to ref 131074
+end
+simplerelationcanvas 132482 simplerelation_ref 188546
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 569 401 3000 to ref 132226
+end
+simplerelationcanvas 132610 simplerelation_ref 188674
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 573 469 3000 to ref 132354
+end
+simplerelationcanvas 132738 simplerelation_ref 187522
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 202 468 3000 to ref 132354
+end
+simplerelationcanvas 132866 simplerelation_ref 187650
+  from ref 128386 z 3006 stereotype "<<extend>>" xyz 198 400 3000 to ref 132226
+end
+simplerelationcanvas 132994 simplerelation_ref 187778
+  from ref 128514 z 3006 stereotype "<<extend>>" xyz 567 133 3000 to ref 128770
+end
+end

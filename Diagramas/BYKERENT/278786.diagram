@@ -1,0 +1,98 @@
+format 76
+
+pseudostatecanvas 128002 pseudostate_ref 161794 // initial
+   xyz 27 19 2000
+end
+pseudostatecanvas 128130 pseudostate_ref 161922 // final
+   xyz 395 293 2000
+end
+statecanvas 128258 state_ref 164482 // Solicitar ID bicicleta
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 33 74 2000 125 33
+end
+statecanvas 128386 state_ref 164610 // Buscar bicicleta
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 265 22 2000 107 33
+end
+statecanvas 128514 state_ref 164866 // Notificar si no existe la bicicleta
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 48 167 2000 193 33
+end
+statecanvas 128642 state_ref 164994 // Validando datos
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 583 170 2000 113 33
+end
+statecanvas 129026 state_ref 164738 // Cambiar datos
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 502 22 2000 101 33
+end
+statecanvas 129794 state_ref 165122 // Notificar si no es posible
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 309 168 2006 157 33
+end
+textcanvas 130306 "se modifica la bicicleta"
+  xyzwh 543 234 2000 80 34
+textcanvas 130434 "existe la bicicleta con ID"
+  xyzwh 401 8 2000 74 38
+textcanvas 130562 "no existe bicicleta con ese ID"
+  xyzwh 246 96 2006 74 44
+textcanvas 130690 "introducir ID"
+  xyzwh 183 40 2000 57 14
+textcanvas 130818 "solicitar modificacion bicicleta"
+  xyzwh 72 19 2000 85 47
+textcanvas 130946 "error al modificar"
+  xyzwh 255 254 2000 58 43
+textcanvas 131330 "error al modificar"
+  xyzwh 404 220 2000 58 43
+textcanvas 131586 "los campos tienen sus valores nuevos"
+  xyzwh 629 84 2000 65 65
+textcanvas 131842 "los campos no tienen sus valores correctos o se produce un error"
+  xyzwh 469 104 2000 91 66
+transitioncanvas 128770 transition_ref 165634 // <transition>
+  
+  from ref 128258 z 2001 to ref 128386
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129154 transition_ref 165506 // <transition>
+  
+  from ref 128002 z 2001 to ref 128258
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129282 transition_ref 165762 // <transition>
+  
+  from ref 128386 z 2001 to ref 129026
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129410 transition_ref 166274 // <transition>
+  decenter_end 469
+  
+  from ref 129026 z 2001 to ref 128642
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129538 transition_ref 166018 // <transition>
+  
+  from ref 128514 z 2001 to ref 128130
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129922 transition_ref 166402 // <transition>
+  decenter_end 432
+  
+  from ref 129026 z 2007 to ref 129794
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130050 transition_ref 166530 // <transition>
+  
+  from ref 129794 z 2007 to ref 128130
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130178 transition_ref 166146 // <transition>
+  
+  from ref 128642 z 2001 to ref 128130
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131202 transition_ref 165890 // <transition>
+  
+  from ref 128386 z 2001 to ref 128514
+  write_horizontally default show_definition default drawing_language default
+end
+end

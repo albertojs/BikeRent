@@ -1,0 +1,46 @@
+format 76
+
+classinstance 128002 class_ref 245762 // Form1
+  name ""   xyz 55 42 2000 life_line_z 2000
+classinstance 128130 class_ref 244994 // Tienda
+  name ""   xyz 217 41 2000 life_line_z 2000
+classinstance 128642 class_ref 244482 // ListaBicicletas
+  name ""   xyz 333 39 2000 life_line_z 2000
+textcanvas 129154 "bici
+"
+  xyzwh 291 219 2020 16 28
+textcanvas 130050 "bici
+"
+  xyzwh 150 235 2020 33 39
+durationcanvas 128258 classinstance_ref 128002 // :Form1
+  xyzwh 74 121 2010 11 177
+end
+durationcanvas 128386 classinstance_ref 128130 // :Tienda
+  xyzwh 236 122 2010 11 131
+end
+durationcanvas 128770 classinstance_ref 128642 // :ListaBicicletas
+  xyzwh 369 160 2010 11 83
+end
+msg 128514 synchronous
+  from durationcanvas_ref 128258
+  to durationcanvas_ref 128386
+  yz 123 2015 msg operation_ref 260482 // "buscaBiciPorRegistro(in numRegistro : int, out bici : Bicicleta) : bool"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 104 109
+msg 128898 synchronous
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128770
+  yz 162 2015 explicitmsg "dameElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 250 148
+msg 129026 return
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 128386
+  yz 229 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129922 return
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128258
+  yz 242 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

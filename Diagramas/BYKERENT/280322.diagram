@@ -1,0 +1,42 @@
+format 76
+
+classinstance 128002 class_ref 246018 // Form1
+  name ""   xyz 54 50 2000 life_line_z 2000
+classinstance 128130 class_ref 246146 // Tienda
+  name ""   xyz 230 50 2000 life_line_z 2000
+classinstance 128258 class_ref 246402 // ListaClientes
+  name ""   xyz 441 50 2000 life_line_z 2000
+durationcanvas 128386 classinstance_ref 128002 // :Form1
+  xyzwh 73 116 2010 11 182
+end
+durationcanvas 128514 classinstance_ref 128130 // :Tienda
+  xyzwh 249 121 2010 11 122
+end
+durationcanvas 128770 classinstance_ref 128258 // :ListaClientes
+  xyzwh 473 142 2010 11 76
+end
+msg 128642 synchronous
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128514
+  yz 122 2015 explicitmsg "buscarClientePorReg()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 119 108
+msg 128898 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128770
+  yz 151 2015 explicitmsg "dameElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 308 137
+msg 129026 return
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 128514
+  yz 188 2015 explicitmsg "Cliente"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 350 174
+msg 129154 return
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128386
+  yz 223 2015 explicitmsg "Cliente"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 150 209
+end

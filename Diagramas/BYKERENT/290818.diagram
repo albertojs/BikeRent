@@ -1,0 +1,27 @@
+format 76
+
+classcanvas 128130 class_ref 253314 // Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 38 151 2000
+end
+usecasecanvas 129154 usecase_ref 215938 // Alta cliente
+  xyzwh 327 29 3005 64 32 label_xy 332 61
+end
+usecasecanvas 129282 usecase_ref 216066 // Baja cliente
+  xyzwh 331 118 3005 64 32 label_xy 335 150
+end
+usecasecanvas 129410 usecase_ref 216194 // Consultar cliente
+  xyzwh 335 203 3005 64 32 label_xy 327 235
+end
+usecasecanvas 129538 usecase_ref 216322 // Modificar cliente
+  xyzwh 343 307 3005 64 32 label_xy 336 339
+end
+line 131074 --->
+  from ref 128130 z 3006 to ref 129282
+line 131202 --->
+  from ref 128130 z 3006 to ref 129410
+line 131330 --->
+  from ref 128130 z 3006 to ref 129538
+line 131458 --->
+  from ref 128130 z 3006 to ref 129154
+end

@@ -1,0 +1,302 @@
+format 76
+"Actividad" // MODELO DATOS::MODELO DE DISEÑO::Actividad
+  revision 5
+  modified_by 2 "Laura"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 214658 "Bicicleta"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    activity 163202 "Alta bicicleta"
+      activitydiagram 291970 "Alta"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 175362 initial_node ""
+	flow 195842 "<flow>"
+	  on activityobject_ref 172802 // activity object Introducir bici
+	end
+      end
+
+      activityobject 172802 "Introducir bici"
+	 explicit_type ""
+	unordered 
+	flow 195970 "<flow>"
+	  on activitynode_ref 175490 // decision
+	end
+      end
+
+      activityobject 172930 "Introducir en fichero"
+	 explicit_type ""
+	unordered 
+	flow 196098 "<flow>"
+	  on activityobject_ref 173058 // activity object Notificar
+	end
+      end
+
+      activityobject 173058 "Notificar"
+	 explicit_type ""
+	unordered 
+	flow 196226 "<flow>"
+	  on activitynode_ref 175618 // merge
+	end
+      end
+
+      activitynode 175490 decision "datos validos"
+	flow 196354 "<flow>"
+	  on activityobject_ref 172930 // activity object Introducir en fichero
+	end
+
+	flow 196482 "<flow>"
+	  on activityobject_ref 173058 // activity object Notificar
+	end
+      end
+
+      activitynode 175746 activity_final ""
+      end
+
+      activitynode 175618 merge ""
+	flow 196610 "<flow>"
+	  on activitynode_ref 175746 // activity_final
+	end
+      end
+    end
+
+    activity 163330 "Baja bicicleta"
+      activitydiagram 292098 "Baja"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 175874 initial_node ""
+	flow 196738 "<flow>"
+	  on activityobject_ref 173186 // activity object Introducir bici
+	end
+      end
+
+      activityobject 173186 "Introducir bici"
+	 explicit_type ""
+	unordered 
+	flow 196866 "<flow>"
+	  on activityobject_ref 173314 // activity object Buscar bici
+	end
+      end
+
+      activityobject 173314 "Buscar bici"
+	 explicit_type ""
+	unordered 
+	flow 196994 "<flow>"
+	  on activitynode_ref 176002 // decision
+	end
+      end
+
+      activityobject 173442 "Borrar bici"
+	 explicit_type ""
+	unordered 
+	flow 197122 "<flow>"
+	  on activityobject_ref 173570 // activity object Notificar
+	end
+      end
+
+      activityobject 173570 "Notificar"
+	 explicit_type ""
+	unordered 
+	flow 197250 "<flow>"
+	  on activitynode_ref 176130 // merge
+	end
+      end
+
+      activitynode 176002 decision "encontrado"
+	flow 197378 "<flow>"
+	  on activityobject_ref 173442 // activity object Borrar bici
+	end
+
+	flow 197506 "<flow>"
+	  on activityobject_ref 173570 // activity object Notificar
+	end
+      end
+
+      activitynode 176258 activity_final ""
+      end
+
+      activitynode 176130 merge ""
+	flow 197634 "<flow>"
+	  on activitynode_ref 176258 // activity_final
+	end
+      end
+    end
+
+    activity 163458 "Modificacion bicicleta"
+      activitydiagram 292226 "Modificacion"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations no shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 176386 initial_node ""
+	flow 197762 "<flow>"
+	  on activityobject_ref 173698 // activity object Introducir bici
+	end
+      end
+
+      activityobject 173698 "Introducir bici"
+	 explicit_type ""
+	unordered 
+	flow 197890 "<flow>"
+	  on activityobject_ref 173826 // activity object Buscar bici
+	end
+      end
+
+      activityobject 173826 "Buscar bici"
+	 explicit_type ""
+	unordered 
+	flow 198018 "<flow>"
+	  on activitynode_ref 176514 // decision
+	end
+      end
+
+      activitynode 176514 decision "encontrado"
+	flow 198146 "<flow>"
+	  on activityobject_ref 173954 // activity object Modificar bici
+	end
+
+	flow 198274 "<flow>"
+	  on activityobject_ref 174082 // activity object Guardar bici
+	end
+
+	flow 198402 "<flow>"
+	  on activityobject_ref 174210 // activity object Notificar
+	end
+      end
+
+      activityobject 173954 "Modificar bici"
+	 explicit_type ""
+	unordered 
+	flow 198530 "<flow>"
+	  on activityobject_ref 174082 // activity object Guardar bici
+	end
+      end
+
+      activityobject 174082 "Guardar bici"
+	 explicit_type ""
+	unordered 
+	flow 198658 "<flow>"
+	  on activityobject_ref 174210 // activity object Notificar
+	end
+      end
+
+      activityobject 174210 "Notificar"
+	 explicit_type ""
+	unordered 
+	flow 198786 "<flow>"
+	  on activitynode_ref 176642 // merge
+	end
+      end
+
+      activitynode 176770 activity_final ""
+      end
+
+      activitynode 176642 merge ""
+	flow 198914 "<flow>"
+	  on activitynode_ref 176770 // activity_final
+	end
+      end
+    end
+
+    activity 163586 "Consulta bicicleta"
+      activitydiagram 292354 "Consulta"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 176898 initial_node ""
+	flow 199042 "<flow>"
+	  on activityobject_ref 174338 // activity object Introducir bici
+	end
+      end
+
+      activityobject 174338 "Introducir bici"
+	 explicit_type ""
+	unordered 
+	flow 199170 "<flow>"
+	  on activityobject_ref 174466 // activity object Buscar bici
+	end
+      end
+
+      activityobject 174466 "Buscar bici"
+	 explicit_type ""
+	unordered 
+	flow 199298 "<flow>"
+	  on activitynode_ref 177026 // decision
+	end
+      end
+
+      activitynode 177026 decision "encontrado"
+	flow 199426 "<flow>"
+	  on activityobject_ref 174594 // activity object Consulta requerida
+	end
+
+	flow 199554 "<flow>"
+	  on activitynode_ref 177154 // activity_final
+	end
+      end
+
+      activityobject 174594 "Consulta requerida"
+	 explicit_type ""
+	unordered 
+	flow 199682 "<flow>"
+	  on activitynode_ref 177282 // merge
+	end
+      end
+
+      activitynode 177154 activity_final ""
+      end
+
+      activitynode 177282 merge ""
+	flow 199810 "<flow>"
+	  on activitynode_ref 177154 // activity_final
+	end
+      end
+    end
+
+  end
+end

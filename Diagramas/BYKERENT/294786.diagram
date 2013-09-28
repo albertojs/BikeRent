@@ -1,0 +1,83 @@
+format 76
+
+classinstance 136834 class_ref 257666 // Form1
+  name ""   xyz 25 12 2000 life_line_z 2000
+classinstance 136962 class_ref 256898 // Tienda
+  name "<<controlador>>"   xyz 123 12 2000 life_line_z 2000
+classinstance 137090 class_ref 256770 // ListaOfertas
+  name ""   xyz 483 13 2005 life_line_z 2000
+classinstance 137346 class_ref 256258 // ListaClientes
+  name ""   xyz 291 9 2010 life_line_z 2000
+textcanvas 137858 "aplicarOferta()"
+  xyzwh 89 65 2000 83 19
+textcanvas 138370 "getIdCliente()"
+  xyzwh 229 76 2025 63 14
+classinstance 138498 class_ref 256002 // ListaAlquileres
+  name ""   xyz 379 14 2015 life_line_z 2000
+fragment 138882 "if"
+  xyzwh 190 116 2020 357 112
+end
+textcanvas 139010 "numAlquileresCliente==suficientes"
+  xyzwh 234 123 2020 165 14
+textcanvas 139522 "<<bool>>"
+  xyzwh 284 144 2000 44 14
+textcanvas 139650 "getIdOferta()"
+  xyzwh 256 166 2035 62 14
+textcanvas 139906 "aplicarDescuento"
+  xyzwh 266 188 2020 84 14
+textcanvas 140290 "descuentoPrecioFinal"
+  xyzwh 67 264 2000 103 14
+durationcanvas 137474 classinstance_ref 136834 // :Form1
+  xyzwh 44 76 2010 11 41
+end
+durationcanvas 137602 classinstance_ref 136962 // <<controlador>>:Tienda
+  xyzwh 180 64 2010 11 226
+end
+durationcanvas 137986 classinstance_ref 137346 // :ListaClientes
+  xyzwh 323 67 2010 11 46
+end
+durationcanvas 138626 classinstance_ref 138498 // :ListaAlquileres
+  xyzwh 416 124 2010 11 58
+end
+durationcanvas 139138 classinstance_ref 137090 // :ListaOfertas
+  xyzwh 515 171 2010 11 39
+end
+durationcanvas 140034 classinstance_ref 136834 // :Form1
+  xyzwh 44 258 2010 11 30
+end
+msg 137730 synchronous
+  from durationcanvas_ref 137474
+  to durationcanvas_ref 137602
+  yz 81 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 138114 synchronous
+  from durationcanvas_ref 137602
+  to durationcanvas_ref 137986
+  yz 89 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 138754 synchronous
+  from durationcanvas_ref 137602
+  to durationcanvas_ref 138626
+  yz 135 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 139266 synchronous
+  from durationcanvas_ref 137602
+  to durationcanvas_ref 139138
+  yz 179 2025 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 139394 return
+  from durationcanvas_ref 138626
+  to durationcanvas_ref 137602
+  yz 157 2030 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 139778 return
+  from durationcanvas_ref 139138
+  to durationcanvas_ref 137602
+  yz 199 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 140162 return
+  from durationcanvas_ref 137602
+  to durationcanvas_ref 140034
+  yz 277 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

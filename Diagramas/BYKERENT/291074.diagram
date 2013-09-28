@@ -1,0 +1,27 @@
+format 76
+
+usecasecanvas 128514 usecase_ref 216962 // Alta oferta
+  xyzwh 342 8 3005 64 32 label_xy 348 40
+end
+usecasecanvas 128642 usecase_ref 217090 // Baja oferta 
+  xyzwh 346 73 3005 64 32 label_xy 350 105
+end
+usecasecanvas 128770 usecase_ref 217218 // Modificar oferta
+  xyzwh 348 151 3005 64 32 label_xy 342 183
+end
+usecasecanvas 128898 usecase_ref 217346 // Cosultar oferta
+  xyzwh 349 223 3005 64 32 label_xy 345 255
+end
+classcanvas 129026 class_ref 253698 // Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 38 111 2000
+end
+line 129154 --->
+  from ref 129026 z 3006 to ref 128514
+line 129282 --->
+  from ref 129026 z 3006 to ref 128642
+line 129410 --->
+  from ref 129026 z 3006 to ref 128770
+line 129538 --->
+  from ref 129026 z 3006 to ref 128898
+end

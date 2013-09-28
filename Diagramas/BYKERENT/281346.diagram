@@ -1,0 +1,54 @@
+format 76
+
+classinstance 128002 class_ref 245762 // Form1
+  name ""   xyz 11 4 2000 life_line_z 2000
+textcanvas 128130 "modificado = true
+"
+  xyzwh 209 266 2020 83 28
+textcanvas 128258 "modificado <<bool>>"
+  xyzwh 51 281 2025 99 14
+classinstance 128386 class_ref 244994 // Tienda
+  name ""   xyz 135 4 2000 life_line_z 2000
+classinstance 128514 class_ref 244482 // ListaBicicletas
+  name ""   xyz 301 4 2000 life_line_z 2000
+durationcanvas 128770 classinstance_ref 128514 // :ListaBicicletas
+  xyzwh 337 231 2010 11 92
+end
+durationcanvas 128898 classinstance_ref 128002 // :Form1
+  xyzwh 30 70 2010 11 289
+end
+durationcanvas 129026 classinstance_ref 128514 // :ListaBicicletas
+  xyzwh 337 95 2010 11 128
+end
+durationcanvas 129154 classinstance_ref 128386 // :Tienda
+  xyzwh 154 90 2010 11 222
+end
+msg 129282 return
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 129154
+  yz 279 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129410 synchronous
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 128770
+  yz 254 2015 explicitmsg "modificaElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 185 239
+msg 129666 synchronous
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 129026
+  yz 118 2015 explicitmsg "dameElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 171 103
+msg 129794 synchronous
+  from durationcanvas_ref 128898
+  to durationcanvas_ref 129154
+  yz 93 2015 msg operation_ref 263170 // "modificarOferta(in numRegistro : int, out oferta : Oferta) : bool"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 60 78
+msg 129922 return
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 128898
+  yz 294 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

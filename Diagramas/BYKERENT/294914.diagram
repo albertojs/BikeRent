@@ -1,0 +1,86 @@
+format 76
+
+classinstance 128002 class_ref 257666 // Form1
+  name ""   xyz 48 17 2000 life_line_z 2000
+textcanvas 128130 "anyadido <<bool>>"
+  xyzwh 265 388 2030 91 14
+textcanvas 128258 "setIdOferta(_ultimoRegOferta)"
+  xyzwh 197 247 3010 140 14
+textcanvas 128386 "anyadido<<bool>>"
+  xyzwh 84 411 2020 90 15
+textcanvas 128514 "<<crear>>
+"
+  xyzwh 223 181 3010 59 19
+classinstance 128642 class_ref 256642 // Oferta
+  name ""   xyz 327 188 2005 life_line_z 2000
+classinstance 128770 class_ref 256898 // Tienda
+  name "<<controlador>>"   xyz 123 18 2000 life_line_z 2000
+textcanvas 128898 "setEstadoBici(Disponible)"
+  xyzwh 203 297 2030 122 14
+classinstance 129026 class_ref 256770 // ListaOfertas
+  name ""   xyz 379 16.5 2000 life_line_z 2000
+textcanvas 129154 "ponElemento()"
+  xyzwh 272 360 2020 71 15
+durationcanvas 129282 classinstance_ref 128002 // :Form1
+  xyzwh 67 168 2010 11 333
+end
+durationcanvas 129410 classinstance_ref 128642 // :Oferta
+  xyzwh 346 256 2010 11 29
+end
+durationcanvas 129538 classinstance_ref 129026 // :ListaOfertas
+  xyzwh 411 371 2010 11 40
+end
+durationcanvas 129666 classinstance_ref 128770 // <<controlador>>:Tienda
+  xyzwh 180 169 2010 11 276
+end
+durationcanvas 129794 classinstance_ref 128642 // :Oferta
+  xyzwh 346 306 2010 11 35
+end
+lostfoundmsgsupport 129922 xyz 322 195 2015
+msg 130050 synchronous
+  from durationcanvas_ref 129666
+  to durationcanvas_ref 129794
+  yz 309 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130178 synchronous
+  from durationcanvas_ref 129282
+  to durationcanvas_ref 129666
+  yz 171 2015 explicitmsg "dar_Alta_Bici()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 90 156
+msg 130306 synchronous
+  from durationcanvas_ref 129666
+  to durationcanvas_ref 129410
+  yz 260 3005 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130434 lost_synchronous
+  from durationcanvas_ref 129666
+  to lostfoundmsgsupport_ref 129922
+  yz 193 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130562 return
+  from durationcanvas_ref 129666
+  to durationcanvas_ref 129282
+  yz 424 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130690 return
+  from durationcanvas_ref 129538
+  to durationcanvas_ref 129666
+  yz 400 2025 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130818 synchronous
+  from durationcanvas_ref 129666
+  to durationcanvas_ref 129538
+  yz 374 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130946 return
+  from durationcanvas_ref 129794
+  to durationcanvas_ref 129666
+  yz 330 2035 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131074 return
+  from durationcanvas_ref 129410
+  to durationcanvas_ref 129666
+  yz 274 3010 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

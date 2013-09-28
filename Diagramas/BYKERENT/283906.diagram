@@ -1,0 +1,74 @@
+format 76
+
+deploymentnodecanvas 128514 deploymentnode_ref 154626 // Carpeta compartida
+  xyzwh 110 178 0 129 34
+end
+deploymentnodecanvas 128898 deploymentnode_ref 154754 // Terminal1
+  xyzwh 50 25 2000 71 33
+end
+deploymentnodecanvas 129026 deploymentnode_ref 154882 // Terminal2
+  xyzwh 145 25 2000 71 33
+end
+deploymentnodecanvas 129154 deploymentnode_ref 155010 // Terminal3
+  xyzwh 244 27 2005 71 33
+end
+deploymentnodecanvas 129282 deploymentnode_ref 155138 // Internet
+  xyzwh 139 127 2000 61 33
+end
+deploymentnodecanvas 131074 deploymentnode_ref 154626 // Carpeta compartida
+  name "FicheroIncidencias"
+  xyzwh 340 233 2000 221 33
+end
+deploymentnodecanvas 131202 deploymentnode_ref 154626 // Carpeta compartida
+  name "FicheroClientes"
+  xyzwh 338 278 2000 213 33
+end
+deploymentnodecanvas 131330 deploymentnode_ref 154626 // Carpeta compartida
+  name "FicheroAlquileres"
+  xyzwh 338 325 2000 213 33
+end
+deploymentnodecanvas 131458 deploymentnode_ref 154626 // Carpeta compartida
+  name "FicheroOfertas"
+  xyzwh 340 373 2000 213 33
+end
+deploymentnodecanvas 131586 deploymentnode_ref 154626 // Carpeta compartida
+  name "FicheroBicicletas"
+  xyzwh 342 187 2000 213 33
+end
+line 129410 ---- decenter_begin 456
+  from ref 128898 z 2001 to ref 129282
+line 130306 ---- decenter_begin 333
+  from ref 129154 z 2006 to ref 129282
+line 130434 ---- decenter_begin 402
+  from ref 129026 z 2001 to ref 129282
+line 130562 ---- decenter_begin 591
+  from ref 129282 z 2001 to ref 128514
+simplerelationcanvas 131714 simplerelation_ref 194818
+  decenter_begin 629
+  from ref 128514 z 2001 to ref 131586
+end
+simplerelationcanvas 131842 simplerelation_ref 194946
+  decenter_begin 776
+  decenter_end 39
+  from ref 128514 z 2001 to point 208 233
+  line 132994 z 2001 to ref 131074
+end
+simplerelationcanvas 131970 simplerelation_ref 195074
+  decenter_begin 629
+  decenter_end 41
+  from ref 128514 z 2001 to point 189 278
+  line 132866 z 2001 to ref 131202
+end
+simplerelationcanvas 132354 simplerelation_ref 195202
+  decenter_begin 319
+  decenter_end 41
+  from ref 128514 z 2001 to point 149 373
+  line 132610 z 2001 to ref 131458
+end
+simplerelationcanvas 132482 simplerelation_ref 195330
+  decenter_begin 474
+  decenter_end 41
+  from ref 128514 z 2001 to point 169 325
+  line 132738 z 2001 to ref 131330
+end
+end

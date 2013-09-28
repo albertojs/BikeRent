@@ -1,0 +1,67 @@
+format 76
+
+pseudostatecanvas 129922 pseudostate_ref 169218 // initial
+   xyz 62 55 2000
+end
+pseudostatecanvas 130050 pseudostate_ref 169346 // final
+   xyz 430 272 2000
+end
+statecanvas 130178 state_ref 173442 // Solicitar ID bicicleta
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 95 90 2000 153 33
+end
+textcanvas 130434 "solicitar baja bicicleta"
+  xyzwh 120 44 2000 82 29
+statecanvas 130562 state_ref 173698 // Validando datos
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 438 190 2000 115 33
+end
+statecanvas 130690 state_ref 173570 // Buscar bicicleta
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 350 90 2000 107 33
+end
+textcanvas 130946 "introducir ID"
+  xyzwh 272 86 2000 57 14
+statecanvas 131074 state_ref 173826 // Notificar si no existe la bicicleta
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 193 189 2005 193 33
+end
+textcanvas 131458 "no existe bicicleta con ese ID"
+  xyzwh 276 131 2006 74 44
+textcanvas 131586 "existe la bicicleta con ID"
+  xyzwh 460 134 2000 74 38
+textcanvas 132098 "se borra la bicicleta"
+  xyzwh 472 246 2000 94 14
+textcanvas 132226 "error al borrar"
+  xyzwh 315 251 2000 58 43
+transitioncanvas 130306 transition_ref 175106 // <transition>
+  
+  from ref 129922 z 2001 to ref 130178
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130818 transition_ref 175234 // <transition>
+  
+  from ref 130178 z 2001 to ref 130690
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131202 transition_ref 175490 // <transition>
+  
+  from ref 130690 z 2006 to ref 131074
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131330 transition_ref 175618 // <transition>
+  
+  from ref 130690 z 2001 to ref 130562
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131714 transition_ref 175746 // <transition>
+  
+  from ref 131074 z 2006 to ref 130050
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131842 transition_ref 175362 // <transition>
+  
+  from ref 130562 z 2001 to ref 130050
+  write_horizontally default show_definition default drawing_language default
+end
+end

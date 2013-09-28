@@ -1,0 +1,83 @@
+format 76
+
+activitynodecanvas 128002 activitynode_ref 128770 // initial_node
+  xyz 216 15 2000
+end
+activityobjectcanvas 128130 activityobject_ref 128898 // activity object Introducir bici
+  show_infonote default drawing_language default show_stereotype_properties default
+  xyzwh 185 57 2000 81 31
+end
+activityobjectcanvas 128258 activityobject_ref 129026 // activity object Buscar bici
+  show_infonote default drawing_language default show_stereotype_properties default
+  xyzwh 191 131 2000 71 31
+end
+activitynodecanvas 128386 activitynode_ref 128898 // decision
+  xyz 213 187 2000
+end
+activityobjectcanvas 128898 activityobject_ref 129154 // activity object Modificar bici
+  show_infonote default drawing_language default show_stereotype_properties default
+  xyzwh 189 254 2000 79 31
+end
+activityobjectcanvas 129026 activityobject_ref 129282 // activity object Guardar bici
+  show_infonote default drawing_language default show_stereotype_properties default
+  xyzwh 198 309 2000 75 31
+end
+activityobjectcanvas 129666 activityobject_ref 129410 // activity object Notificar
+  show_infonote default drawing_language default show_stereotype_properties default
+  xyzwh 205 355 2000 57 31
+end
+activitynodecanvas 130306 activitynode_ref 129026 // activity_final
+  xyz 222 486 2000
+end
+activitynodecanvas 130434 activitynode_ref 130946 // merge
+  xyz 220 415 2000
+end
+flowcanvas 128514 flow_ref 129410 // <flow>
+  
+  from ref 128002 z 2001 to ref 128130
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+flowcanvas 128642 flow_ref 129538 // <flow>
+  
+  from ref 128130 z 2001 to ref 128258
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+flowcanvas 128770 flow_ref 129666 // <flow>
+  
+  from ref 128258 z 2001 to ref 128386
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+flowcanvas 129154 flow_ref 129794 // <flow>
+  
+  from ref 128386 z 2001 to ref 128898
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+flowcanvas 129282 flow_ref 129922 // <flow>
+  decenter_end 425
+  
+  from ref 128898 z 2001 to ref 129026
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+flowcanvas 129794 flow_ref 130178 // <flow>
+  
+  from ref 129026 z 2001 to ref 129666
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+flowcanvas 129922 flow_ref 130306 // <flow>
+  
+  from ref 128386 z 2001 to point 142 203
+  line 130050 z 2001 to point 143 367
+  line 130178 z 2001 to ref 129666
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+flowcanvas 130562 flow_ref 134914 // <flow>
+  
+  from ref 129666 z 2001 to ref 130434
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+flowcanvas 130690 flow_ref 135042 // <flow>
+  
+  from ref 130434 z 2001 to ref 130306
+  show_infonote default drawing_language default show_stereotype_properties default write_horizontally default
+end
+end

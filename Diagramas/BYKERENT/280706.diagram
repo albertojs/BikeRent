@@ -1,0 +1,85 @@
+format 76
+
+classinstance 143618 class_ref 244098 // ListaAlquileres
+  name ""   xyz 271.5 27.5 2000 life_line_z 2010
+textcanvas 143874 "borrado = true
+"
+  xyzwh 183 262 2025 86 27
+textcanvas 144002 "borrado <<bool>>"
+  xyzwh 45 394 2020 85 14
+classinstance 144130 class_ref 244994 // Tienda
+  name "<<controlador>>"   xyz 84.5 28.5 2005 life_line_z 2010
+fragment 144258 "if"
+  xyzwh 150.5 125.5 2000 337 264
+end
+classinstance 145282 class_ref 245762 // Form1
+  name ""   xyz 5 27 2000 life_line_z 2000
+textcanvas 145794 "bajaAlquiler()"
+  xyzwh 55 81 2020 64 14
+textcanvas 145922 "getAlquiler(nReg)"
+  xyzwh 190 140 2010 84 14
+classinstance 146818 class_ref 244482 // ListaBicicletas
+  name ""   xyz 417 26 2005 life_line_z 2000
+textcanvas 147202 "getIdBicicleta()"
+  xyzwh 209 328 2000 82 14
+textcanvas 147458 "setEstado()==Disponible"
+  xyzwh 191 356 2000 117 14
+durationcanvas 144386 classinstance_ref 143618 // :ListaAlquileres
+  xyzwh 308 154 2015 11 59
+end
+durationcanvas 144514 classinstance_ref 144130 // <<controlador>>:Tienda
+  xyzwh 141 91 2015 11 263
+end
+durationcanvas 144642 classinstance_ref 143618 // :ListaAlquileres
+  xyzwh 308 243 2015 11 45
+end
+durationcanvas 145410 classinstance_ref 145282 // :Form1
+  xyzwh 24 75 2010 11 40
+end
+durationcanvas 145538 classinstance_ref 144130 // <<controlador>>:Tienda
+  xyzwh 141 78 2015 11 349
+end
+durationcanvas 146946 classinstance_ref 146818 // :ListaBicicletas
+  xyzwh 453 339 2010 11 43
+end
+durationcanvas 147586 classinstance_ref 145282 // :Form1
+  xyzwh 24 407 2010 11 25
+end
+msg 144770 synchronous
+  from durationcanvas_ref 144514
+  to durationcanvas_ref 144642
+  yz 243 2015 explicitmsg "borraElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 170 230
+msg 145026 synchronous
+  from durationcanvas_ref 144514
+  to durationcanvas_ref 144386
+  yz 154 2015 explicitmsg "getBicicleta(nReg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 285 1296
+msg 145154 return
+  from durationcanvas_ref 144642
+  to durationcanvas_ref 144514
+  yz 275 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 145666 synchronous
+  from durationcanvas_ref 145410
+  to durationcanvas_ref 145538
+  yz 94 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 147074 synchronous
+  from durationcanvas_ref 145538
+  to durationcanvas_ref 146946
+  yz 341 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 147330 return
+  from durationcanvas_ref 146946
+  to durationcanvas_ref 145538
+  yz 371 2025 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 147714 return
+  from durationcanvas_ref 145538
+  to durationcanvas_ref 147586
+  yz 407 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

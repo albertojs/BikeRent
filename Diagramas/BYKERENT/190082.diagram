@@ -1,0 +1,96 @@
+format 76
+
+note 131714 "DATOS ALQUILER
+ID alquiler
+Fecha alquiler
+Fecha devolucion
+ID bici
+ID cliente
+Tipo bicicleta
+Precio factura"
+  xyzwh 93.5 372.5 2000 113 133
+classinstance 132994 class_ref 201090 // Tienda
+  name "<<controlador>>"   xyz 170 33.5 2000 life_line_z 2000
+classinstance 133122 class_ref 200194 // ListaAlquileres
+  name ""   xyz 432 23.5 2000 life_line_z 2000
+classinstance 133378 class_ref 143362 // Form1
+  name ""   xyz 46 34.5 2000 life_line_z 2000
+textcanvas 134402 "consultaAlquiler()"
+  xyzwh 108 99 2000 85 14
+fragment 134530 "if"
+  xyzwh 236 244 1980 256 155
+end
+textcanvas 134658 "getDatosAlquiler()"
+  xyzwh 303 313 2000 159 31
+fragment 134786 "if"
+  xyzwh 237 113 1995 256 132
+end
+textcanvas 134914 "dameElemento(posicion)==NULL"
+  xyzwh 276 141 2000 155 14
+textcanvas 135042 "errorNoHayDatos"
+  xyzwh 316 176 2025 87 14
+textcanvas 135810 "dameElemento(posicion)=!NULL"
+  xyzwh 269 266 2000 158 15
+fragment 135938 "while"
+  xyzwh 244 288 1985 245 101
+end
+textcanvas 136962 "listarDatos"
+  xyzwh 120 340 2025 62 22
+textcanvas 137346 "Error"
+  xyzwh 138 194 2030 32 27
+durationcanvas 133506 classinstance_ref 133378 // :Form1
+  xyzwh 65 113 2010 11 50
+end
+durationcanvas 133634 classinstance_ref 133122 // :ListaAlquileres
+  xyzwh 469 151 2015 11 84
+end
+durationcanvas 133762 classinstance_ref 132994 // <<controlador>>:Tienda
+  xyzwh 227 120 2015 11 296
+end
+durationcanvas 135554 classinstance_ref 133122 // :ListaAlquileres
+  xyzwh 469 269 2010 11 88
+end
+durationcanvas 136706 classinstance_ref 133378 // :Form1
+  xyzwh 65 341 2010 11 40
+end
+durationcanvas 137090 classinstance_ref 133378 // :Form1
+  xyzwh 65 205 2010 11 25
+end
+msg 134018 return
+  from durationcanvas_ref 133634
+  to durationcanvas_ref 133762
+  yz 194 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 134146 synchronous
+  from durationcanvas_ref 133762
+  to durationcanvas_ref 133634
+  yz 160 2020 explicitmsg "dameElemento(posicion)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 120 1282
+msg 134274 synchronous
+  from durationcanvas_ref 133506
+  to durationcanvas_ref 133762
+  yz 122 2020 msg operation_ref 184962 // "buscaBiciPorRegistro(in numRegistro : int, out bici : Bicicleta) : bool"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 126 1285
+msg 135682 synchronous
+  from durationcanvas_ref 133762
+  to durationcanvas_ref 135554
+  yz 278 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 136578 return
+  from durationcanvas_ref 135554
+  to durationcanvas_ref 133762
+  yz 324 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 136834 return
+  from durationcanvas_ref 133762
+  to durationcanvas_ref 136706
+  yz 358 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 137218 return
+  from durationcanvas_ref 133762
+  to durationcanvas_ref 137090
+  yz 205 2025 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

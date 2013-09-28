@@ -1,0 +1,67 @@
+format 76
+
+componentcanvas 128514 component_ref 128258 // Tienda
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  color mediumyellow xyzwh 5 14 2000 647 367
+end
+componentcanvas 128642 component_ref 128386 // Alquiler
+  draw_component_as_icon default show_component_req_prov no show_component_rea no show_stereotype_properties no
+  xyzwh 383 129 2005 177 51
+end
+componentcanvas 128770 component_ref 128770 // Oferta
+  draw_component_as_icon default show_component_req_prov no show_component_rea no show_stereotype_properties no
+  xyzwh 33 55 2005 183 51
+end
+componentcanvas 129410 component_ref 128642 // Cliente
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 38 116 2005 165 51
+end
+componentcanvas 129538 component_ref 128898 // Incidencia
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 36 292 2005 143 51
+end
+componentcanvas 129666 component_ref 128514 // Bicicleta
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 39 193 2005 143 51
+end
+arrowjunctioncanvas 131074 class_ref 255874 // Alquiler
+  xyz 322 91 3005 label_xy 313 110
+arrowjunctioncanvas 131330 class_ref 256642 // Oferta
+  xyz 322 99 3011 label_xy 316 118
+arrowjunctioncanvas 131586 class_ref 255874 // Alquiler
+  xyz 303 155 3005 label_xy 294 174
+arrowjunctioncanvas 131842 class_ref 256130 // Cliente
+  xyz 302 163 3011 label_xy 295 182
+arrowjunctioncanvas 132354 class_ref 255490 // Incidencia
+  xyz 103 253 3005 label_xy 88 272
+arrowjunctioncanvas 132610 class_ref 255874 // Alquiler
+  xyz 306 212 3011 label_xy 297 231
+arrowjunctioncanvas 132866 class_ref 255746 // Bicicleta
+  xyz 303 218 3017 label_xy 292 237
+arrowjunctioncanvas 133122 class_ref 255746 // Bicicleta
+  xyz 104 247 3011 label_xy 93 266
+arrowjunctioncanvas 133378 class_ref 255874 // Alquiler
+  xyz 606 144 3005 label_xy 597 163
+arrowjunctioncanvas 133634 class_ref 255874 // Alquiler
+  xyz 399 282 3005 label_xy 390 301
+line 131202 ---(
+  from ref 128642 z 3006 to ref 131074
+line 131458 ---O
+  from ref 128770 z 3012 to ref 131330
+line 131714 ---(
+  from ref 128642 z 3006 to ref 131586
+line 131970 ---O
+  from ref 129410 z 3012 to ref 131842
+line 132482 ---O
+  from ref 129538 z 3006 to ref 132354
+line 132738 ---(
+  from ref 128642 z 3012 to ref 132610
+line 132994 ---O
+  from ref 129666 z 3018 to ref 132866
+line 133250 ---(
+  from ref 129666 z 3012 to ref 133122
+line 133506 ---O
+  from ref 128642 z 3006 to ref 133378
+line 133762 ---(
+  from ref 128642 z 3006 to ref 133634
+end

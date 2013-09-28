@@ -1,0 +1,67 @@
+format 76
+
+pseudostatecanvas 128002 pseudostate_ref 135426 // initial
+   xyz 92 43 2000
+end
+pseudostatecanvas 128130 pseudostate_ref 135554 // final
+   xyz 395 281 2000
+end
+statecanvas 128258 state_ref 137090 // Bicicleta con incidencia
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 177 79 2000 165 33
+end
+statecanvas 128386 state_ref 137218 // Evaluacion
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 483 79 2000 155 33
+end
+statecanvas 128514 state_ref 137346 // Notificar error
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 81 184 2000 241 33
+end
+textcanvas 128770 "bicicleta tiene una incidencia"
+  xyzwh 147 43 2006 137 14
+statecanvas 129282 state_ref 137474 // En taller
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 528 192 2000 65 33
+end
+textcanvas 129922 "Se comprueba el estado"
+  xyzwh 368 62 2000 87 46
+textcanvas 130050 "Si esta disponible"
+  xyzwh 575 138 2006 84 14
+textcanvas 130178 "Si esta alquilada"
+  xyzwh 360 155 2000 78 14
+textcanvas 130306 "cambia su estado a enTaller y esta pendiente de resolver la incidencia"
+  xyzwh 494 243 2000 109 91
+textcanvas 130434 "no puede pasar a incidencia mientras no este disponible"
+  xyzwh 176 254 2000 140 39
+transitioncanvas 128642 transition_ref 137730 // <transition>
+  
+  from ref 128002 z 2001 to ref 128258
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 128898 transition_ref 137858 // <transition>
+  
+  from ref 128258 z 2001 to ref 128386
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129410 transition_ref 137986 // <transition>
+  
+  from ref 128386 z 2001 to ref 128514
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129538 transition_ref 138114 // <transition>
+  
+  from ref 128386 z 2001 to ref 129282
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129666 transition_ref 138242 // <transition>
+  
+  from ref 129282 z 2001 to ref 128130
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129794 transition_ref 138370 // <transition>
+  
+  from ref 128514 z 2001 to ref 128130
+  write_horizontally default show_definition default drawing_language default
+end
+end

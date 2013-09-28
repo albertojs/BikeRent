@@ -1,0 +1,46 @@
+format 76
+
+note 131458 "DATOS ALQUILER
+ID alquiler
+Fecha alquiler
+Fecha devolucion
+ID bici
+ID cliente
+Tipo bicicleta
+Precio factura"
+  xyzwh 93 154 2000 111 135
+classinstance 131970 class_ref 256898 // Tienda
+ name "<<controlador>>"  xyz 219 101.5 2000
+classinstance 132098 class_ref 256002 // ListaAlquileres
+ name ""  xyz 517 102.5 2000
+classinstance 132226 class_ref 257666 // Form1
+ name ""  xyz 10 101.5 2000
+linkcanvas 132610
+  from ref 131970 z 2001 to ref 132098
+dirscanvas 132738 z 1000 linkcanvas_ref 132610
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "2 dameElemento(posicion)" xyz 368 82 3000
+  backward_label "3 alquileres" xyz 402 132 3000
+linkcanvas 132994
+  from ref 132226 z 2001 to ref 131970
+dirscanvas 133122 z 1000 linkcanvas_ref 132994
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "1 consultaAlquiler()" xyz 92 82 3000
+  backward_label "4 mostrarDatos()" xyz 97 132 3000
+msgs
+  explicitmsg "consultaAlquiler()"
+    forward ranks 1 "1" dirscanvas_ref 133122
+    no_msg
+  explicitmsg "dameElemento(posicion)"
+    forward ranks 2 "2" dirscanvas_ref 132738
+    msgs
+      explicitmsg "alquileres"
+	backward ranks 3 "2.1" dirscanvas_ref 132738
+	msgs
+	  explicitmsg "mostrarDatos()"
+	    backward ranks 4 "2.1.1" dirscanvas_ref 133122
+	    no_msg
+	msgsend
+    msgsend
+msgsend
+end

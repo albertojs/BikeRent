@@ -1,0 +1,27 @@
+format 76
+
+classcanvas 128002 class_ref 241410 // Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 44 77 2000
+end
+usecasecanvas 128130 usecase_ref 199170 // Alta alquileres
+  xyzwh 356 17 3005 64 32 label_xy 354 49
+end
+usecasecanvas 128258 usecase_ref 199298 // Baja alquileres
+  xyzwh 356 91 3005 64 32 label_xy 353 123
+end
+usecasecanvas 128514 usecase_ref 199426 // Consultar alquiler
+  xyzwh 359 190 3005 64 32 label_xy 350 222
+end
+usecasecanvas 128642 usecase_ref 199554 // Asignar oferta
+  xyzwh 358 286 3005 64 32 label_xy 357 325
+end
+line 128770 --->
+  from ref 128002 z 3006 to ref 128130
+line 128898 --->
+  from ref 128002 z 3006 to ref 128258
+line 129154 --->
+  from ref 128002 z 3006 to ref 128514
+line 129282 --->
+  from ref 128002 z 3006 to ref 128642
+end

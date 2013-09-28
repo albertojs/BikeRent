@@ -1,0 +1,37 @@
+format 76
+
+classinstance 128002 class_ref 246018 // Form1
+ name ""  xyz 123 116 2000
+classinstance 128130 class_ref 246146 // Tienda
+ name ""  xyz 319 117 2000
+classinstance 128258 class_ref 246402 // ListaClientes
+ name ""  xyz 515 117 2000
+linkcanvas 128386
+  from ref 128002 z 2001 to ref 128130
+dirscanvas 128514 z 1000 linkcanvas_ref 128386
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "1 borrarCliente" xyz 210 97 3000
+linkcanvas 128642
+  from ref 128130 z 2001 to ref 128258
+dirscanvas 128770 z 1000 linkcanvas_ref 128642
+  show_full_operations_definition default show_hierarchical_rank default drawing_language default show_msg_context default
+  forward_label "2 getCliente
+3 borrarElemento(posicion)" xyz 377 81 3000
+  backward_label "4 borrado<<bool>>" xyz 395 148 3000
+msgs
+  explicitmsg "borrarCliente"
+    forward ranks 1 "1" dirscanvas_ref 128514
+    msgs
+      explicitmsg "getCliente"
+	forward ranks 2 "1.1" dirscanvas_ref 128770
+	no_msg
+      explicitmsg "borrarElemento(posicion)"
+	forward ranks 3 "1.2" dirscanvas_ref 128770
+	msgs
+	  explicitmsg "borrado<<bool>>"
+	    backward ranks 4 "1.2.1" dirscanvas_ref 128770
+	    no_msg
+	msgsend
+    msgsend
+msgsend
+end

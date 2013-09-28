@@ -1,0 +1,72 @@
+format 76
+
+classcanvas 128130 class_ref 254978 // Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 38 151 2000
+end
+usecasecanvas 129154 usecase_ref 220290 // Alta cliente
+  xyzwh 339 166 3005 64 32 label_xy 344 198
+end
+usecasecanvas 129282 usecase_ref 221186 // Baja cliente
+  xyzwh 251 61 3005 64 32 label_xy 255 93
+end
+usecasecanvas 129410 usecase_ref 221314 // Consultar cliente
+  xyzwh 245 222 3005 64 32 label_xy 237 254
+end
+usecasecanvas 129538 usecase_ref 221442 // Modificar cliente
+  xyzwh 343 349 3005 64 32 label_xy 336 381
+end
+usecasecanvas 131586 usecase_ref 220418 // introducir ID_cliente
+  xyzwh 567 5 3005 64 32 label_xy 552 37
+end
+usecasecanvas 131714 usecase_ref 220546 // introducir DNI
+  xyzwh 566 61 3005 64 32 label_xy 566 93
+end
+usecasecanvas 131842 usecase_ref 220674 // introducir nombre
+  xyzwh 565 112 3005 64 32 label_xy 555 144
+end
+usecasecanvas 131970 usecase_ref 220802 // introducir apellidos
+  xyzwh 566 171 3005 64 32 label_xy 553 203
+end
+usecasecanvas 132098 usecase_ref 220930 // introducir telefono
+  xyzwh 566 229 3010 64 32 label_xy 555 261
+end
+usecasecanvas 132226 usecase_ref 221058 // modificar  lista_alquileres
+  xyzwh 566 287 3005 64 32 label_xy 538 319
+end
+line 131074 --->
+  from ref 128130 z 3006 to ref 129282
+line 131202 --->
+  from ref 128130 z 3006 to ref 129410
+line 131330 --->
+  from ref 128130 z 3006 to ref 129538
+line 131458 --->
+  from ref 128130 z 3006 to ref 129154
+simplerelationcanvas 132354 simplerelation_ref 206978
+  from ref 129154 z 3006 stereotype "<<extend>>" xyz 452 100 3000 to ref 131586
+end
+simplerelationcanvas 132482 simplerelation_ref 207106
+  from ref 129154 z 3006 stereotype "<<extend>>" xyz 454 126 3000 to ref 131714
+end
+simplerelationcanvas 132610 simplerelation_ref 207234
+  from ref 129154 z 3006 stereotype "<<extend>>" xyz 455 152 3000 to ref 131842
+end
+simplerelationcanvas 132738 simplerelation_ref 207362
+  from ref 129154 z 3006 stereotype "<<extend>>" xyz 455 182 3000 to ref 131970
+end
+simplerelationcanvas 132866 simplerelation_ref 207490
+  from ref 129154 z 3011 stereotype "<<extend>>" xyz 455 211 3000 to ref 132098
+end
+simplerelationcanvas 132994 simplerelation_ref 207618
+  from ref 129154 z 3006 stereotype "<<extend>>" xyz 457 241 3000 to ref 132226
+end
+simplerelationcanvas 133506 simplerelation_ref 207874
+  from ref 129410 z 3006 stereotype "<<include>>" xyz 290 209 3000 to ref 129154
+end
+simplerelationcanvas 133634 simplerelation_ref 208002
+  from ref 129538 z 3006 stereotype "<<include>>" xyz 342 272 3000 to ref 129154
+end
+simplerelationcanvas 133762 simplerelation_ref 207746
+  from ref 129282 z 3006 stereotype "<<include>>" xyz 296 128 3000 to ref 129154
+end
+end
